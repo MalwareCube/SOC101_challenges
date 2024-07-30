@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SOC101_challenges/static/css/main.8c1a3798.css",
+    "main.js": "/SOC101_challenges/static/js/main.688dc093.js",
+    "index.html": "/SOC101_challenges/index.html",
+    "main.8c1a3798.css.map": "/SOC101_challenges/static/css/main.8c1a3798.css.map",
+    "main.688dc093.js.map": "/SOC101_challenges/static/js/main.688dc093.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c1a3798.css",
+    "static/js/main.688dc093.js"
+  ]
+}
