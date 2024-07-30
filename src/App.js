@@ -9,7 +9,7 @@ import Challenge from './components/challenges/Challenge.jsx';
 // Data
 import challengedb from './components/challenges/data/challengedb.js';
 
-//Routes
+// Routes
 import Home from './components/home/Home.jsx';
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
         <Header />
 
         <Routes>
-            {/*Home*/}
-            <Route path="/" element={<Home />} />
+          {/* Home */}
+          <Route path="/" element={<Home />} />
 
           {/* Challenges */}
           {challengedb.map((challenge) => (
@@ -31,8 +31,8 @@ function App() {
             />
           ))}
 
-            {/*Rewrite*/}
-            <Route path="*" element={<Navigate to="/" replace />} />
+          {/* Rewrite */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
         <Footer />
