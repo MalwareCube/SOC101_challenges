@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+// Components
+import Header from './components/navigation/Header.jsx';
+import Footer from './components/navigation/Footer.jsx';
+import Challenge from './components/challenges/Challenge.jsx';
+
+// Data
+import challengedb from './components/challenges/data/challengedb.js';
+
+//Routes
+import Home from './components/home/Home.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+
+        <Routes>
+            {/*Home*/}
+            <Route path="/" element={<Home />} />
+
+          {/* Challenges */}
+          {challengedb.map((challenge) => (
+            <Route
+              key={challenge.id}
+              path={`/c/${challenge.id}`}
+              element={<Challenge data={challenge.data} />}
+            />
+          ))}
+
+            {/*Rewrite*/}
+            <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

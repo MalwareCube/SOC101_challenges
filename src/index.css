@@ -1,13 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*CSS Reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+::selection {
+    background: rgb(219, 18, 89);
+    color: #FFFFFF;
+  }
+
+/*Main Elements*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #110936;
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
+i {
+    font-weight: 400;
+    font-style: italic;
+}
+
+b {
+    font-weight: 700;
+    font-style: normal;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+/*Headings*/
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+  }
+
+
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin: 0px 2px;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+a {
+    color: #d80650;
+    text-decoration: none;
+}
+
+/*Custom Elements*/
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0px 20px;
+}
+
+.topBar {
+    width:100%;
+    height:4px;
+    background:linear-gradient(to right,#692e8f,#d80650);
+    margin-bottom: 20px;
+}
+
+
+/*Challenge Form*/
+.challenge_form {
+    transition: all .2s;
+    margin-top: 40px;
+}
+
+.challenge_instructions {
+    margin-bottom: 40px;
+}
+
+.challenge_question {
+    background-color: rgba(255,255,255,.05);
+    border-radius: 0px 5px 5px 0px;
+    border-left: solid 4px rgba(255,255,255,.05);
+    padding: 20px;
+    transition: all .2s;
+    margin-bottom: 20px;
+}
+
+/*Correct Answer*/
+.challenge_question-correct {
+    border-color: #2a7239;
+}
+
+/*Incorrect Answer*/
+.challenge_question-incorrect {
+    border-color: #9b2323;
+}
+
+@keyframes incorrectShake {
+    0% { padding-left: 12px; }
+    25% { padding-left: 16px; }
+    50% { padding-left: 12px; }
+    75% { padding-left: 16px; }
+    100% { padding-left: 12px; }
+}
+
+.challenge_question_submission_text.shake {
+    animation: incorrectShake 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.challenge_question_number {
+    margin-bottom: 20px;
+    user-select: none;
+    font-size: 1em;
+}
+
+.challenge_question_label {
+    font-size: 1em;
+}
+
+.challenge_question_submission {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.challenge_question_submission_text {
+    flex-grow: 1;
+    background-color: rgba(0,0,0,.4);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    transition: all .2s;
+}
+
+.challenge_question_submission_text::placeholder {
+    opacity: .5;
+}
+
+/*Correct Answer*/
+.challenge_question_submission_text-correct {
+    opacity: .5;
+}
+
+
+
+.challenge_question_submission_button {
+   border: none;
+   color: #FFFFFF;
+   font-size: 1em;
+   padding: 8px 12px;
+   border-radius: 2px;
+   cursor: pointer;
+   transition: all .2s;
+}
+
+.challenge_question_submission_button:hover {
+    opacity: .8;
+}
+
+.challenge_question_submission_button-submit {
+    background-color: #175ab1;
+}
+
+.challenge_question_submission_button-hint {
+    background-color: rgb(92, 92, 92);
+}
+
+.challenge_question_submission_button-hint-active {
+    background-color: #c0730d;
+}
+
+/*Correct Answer Buttons*/
+.challenge_question_submission_button-correct {
+    background-color: #2a7239;
+    cursor: default;
+    user-select: none;
+}
+.challenge_question_submission_button-correct:hover {
+    opacity: 1;
+}
+
+
+/*Challenge Hint*/
+.challenge_question_hint {
+    border-top: solid 1px rgba(255,255,255,.1);
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+.challenge_question_hint h3 {
+    margin-bottom: 20px;
+    user-select: none;
+    font-size: 1em;
+}
+
+.challenge_question_hint p {
+    margin-bottom: 0;
+}
+
+
+
+/*Header*/
+.header {
+    background-color: rgba(255,255,255,.05);
+    transition: all .2s;
+    user-select: none;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.header_breadcrumb {
+    display: flex;
+    row-gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header_breadcrumb_item {
+    opacity: .5;
+    color: #FFFFFF;
+}
+
+.header_breadcrumb_item:last-child {
+    font-weight: 700;
+    opacity: 1;
+}
+
+.header_breadcrumb_item::after {
+    content: "/";
+    margin: 0 10px;
+    opacity: .25;
+    font-weight: 700;
+}
+
+.header_breadcrumb_item:last-child::after {
+    content: none;
+}
+
+
+/*Footer*/
+.footer {
+    margin-top: 60px;
+    background-color: rgba(255,255,255,.05);
+    padding: 40px 0px;
+    transition: all .2s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.footer_info {
+    font-size: .9em;
+    color: rgba(255,255,255,.6);
+    margin-bottom: 10px;
+}
+
+.footer_copyright {
+    font-size: .9em;
+    color: rgba(255,255,255,.6);
+    margin: 0;
+}
+
+
+
+/*Challenge Navigation*/
+
+.challenge_nav {
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.challenge_nav_item {
+    background-color: rgba(255,255,255,.05);
+    padding: 40px;
+    transition: all .2s;
+    text-align: center;
+    user-select: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+
+.challenge_nav_item h3 {
+    line-height: 1.4em;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.challenge_nav_item h4 {
+    margin: 0;
+    opacity: .5;
+    font-size: .9em;
+    line-height: 1.4em;
+}
+
+.challenge_nav_item:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,.08);
 }
