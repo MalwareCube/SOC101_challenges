@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 // Components
 import Header from './components/navigation/Header.jsx';
@@ -19,10 +19,10 @@ function App() {
         <Header />
 
         <Routes>
-          {/* Home */}
+          {/* Home Route */}
           <Route path="/" element={<Home />} />
 
-          {/* Challenges */}
+          {/* Challenge Routes */}
           {challengedb.map((challenge) => (
             <Route
               key={challenge.id}
@@ -31,7 +31,7 @@ function App() {
             />
           ))}
 
-          {/* Rewrite */}
+          {/* Catch-All Route */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
