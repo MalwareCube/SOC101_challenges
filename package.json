@@ -2,7 +2,7 @@
   "name": "soc101_challenges",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://malwarecube.github.io/SOC101_challenges/",
+  "homepage": "https://challenges.malwarecube.com",
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.1",
