@@ -7,7 +7,10 @@ const challengedb = [
       id: "5e3f6ff6-46f7-4042-a969-34fd16451328",
       data: require('./5e3f6ff6-46f7-4042-a969-34fd16451328.json'),
     },
+    {
+      id: "763f7d78-84c4-465f-9c7d-085e33e21d64",
+      data: require('./763f7d78-84c4-465f-9c7d-085e33e21d64.json'),
+    },
   ];
   
   export default challengedb;
-  

@@ -1,0 +1,107 @@
+{
+    "uid": "763f7d78-84c4-465f-9c7d-085e33e21d64",
+    "title": "Phishing Analysis Challenge 3",
+    "instructions": "<p>You are a SOC Analyst at Global Logistics. The SOC received an alert about a quarantined email that was flagged by the company's email gateway solution. The email was sent to Emily Nguyen, a member of the marketing team, from her friend Alexia Barry. As the analyst assigned to this ticket, your task is to review the email to determine if the email is safe to release to Emily's inbox or if further action is needed.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge3.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge3.eml</code><ul></li></p>",
+  
+  
+    "questions": [
+        {
+            "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>Date</b> header.",
+            "placeholder": "***, ** *** **** **:**:** +****",
+            "correct_answers": ["Tue, 14 May 2024 23:31:08 +0000", "Tue, 14 May 2024 23:31:08", "Tue 14 May 2024 23:31:08", "5/14/24, 19:31"]  
+        },
+        {
+            "question": "What is the subject of the email?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>Subject</b> header.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["You're Invited!"]  
+        },
+        {
+            "question": "Who was the email sent to?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>To</b> header.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["emily.nguyen@glbllogistics.co"]  
+        },
+        {
+            "question": "Based on the sender's display name, who does the email claim to be from?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>From</b> header. Specifically, the display name portion.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Adam Barry"]  
+        },
+        {
+            "question": "What is the sender's email address?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>From</b> header. Specifically, the email address portion.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["abarry@live.com"]  
+        },
+        {
+            "question": "What email infrastructure or provider was used to send the email?",
+            "type": "text_input",
+            "hint": "Look up who owns the sender's domain.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Microsoft", "Microsoft Corporation"]  
+        },
+        {
+            "question": "What is email's Message ID?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["<SA1PR14MB737384979FDD1178FD956584C1E32@SA1PR14MB7373.namprd14.prod.outlook.com>", "SA1PR14MB737384979FDD1178FD956584C1E32@SA1PR14MB7373.namprd14.prod.outlook.com"]  
+        },
+
+        {
+            "question": "Run <code>emldump.py</code> against the email file. Which index number contains the file attachment?",
+            "type": "text_input",
+            "hint": "The script can be found under <code>/01_Phishing_Analysis/Tools/emldump.py</code>. To view the different parts (indexes) of the MIME file, use the <code>-d</code> (dump) option.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["5"]  
+        },
+
+        {
+            "question": "What is the filename of the attachment?",
+            "type": "text_input",
+            "placeholder": "**_*******_****.****",
+            "correct_answers": ["AR_Wedding_RSVP.docm"]  
+        },
+
+        {
+            "question": "What is the <b>SHA-256</b> hash of the attachment?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["41c3dd4e9f794d53c212398891931760de469321e4c5d04be719d5485ed8f53e"]  
+        },
+
+        {
+            "question": "Submit the hash value to VirusTotal. What is the <b>Popular threat label</b> returned for this sample?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["downloader.autdwnlrner/w97m"]  
+        },
+
+        {
+            "question": "<b>[Yes or No]</b> - After your analysis, should the email be released to the user's inbox?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["no"]  
+        },
+        {
+            "question": "<b>[Bonus]</b> - Perform static analysis on the malicious document and its embedded VBA macro. What URL does the malware attempt to download an executable from? Provide the URL in <b>defanged</b> format.",
+            "type": "text_input",
+            "hint": "The <code>oledump.py</code> script can be used to carve into the file's embedded content. It can be found under <code>/01_Phishing_Analysis/Tools/oledump.py</code>.",
+            "placeholder": "*****[://]******[.]***/*****/********-********[.]***",
+            "correct_answers": ["hxxps[://]github[.]com/TCWUS/Pastebin-Uploader[.]exe"]  
+        },
+        {
+            "question": "<b>[Bonus]</b> - Perform static analysis on the malicious document and its embedded VBA macro. What is the filename used by the macro to save the executable?",
+            "type": "text_input",
+            "hint": "The <code>oledump.py</code> script can be used to carve into the file's embedded content. It can be found under <code>/01_Phishing_Analysis/Tools/oledump.py</code>.",
+            "placeholder": "*****.***",
+            "correct_answers": ["shost.exe"]  
+        }
+    ]
+  }
