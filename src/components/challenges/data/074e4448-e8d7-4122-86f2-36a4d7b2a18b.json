@@ -3,12 +3,12 @@
   "title": "Phishing Analysis Challenge 1",
   "domain": 1,
   "order": 0,
-  "instructions": "<p>You are a SOC Analayst at Mighty Solutions, Inc. An account executive, Dana Derringer, noticed a warning email in her inbox claiming her online access has been disabled. However, she noticed this was odd as she is still able to access her online business platforms and inbox. She decided to forward the email in question to the security team's phishing mailbox for review.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge1.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/06_Challenges/challenge1.eml</code><ul></li></p>",
+  "instructions": "<p>You are a SOC Analyst at Mighty Solutions, Inc. An account executive, Dana Derringer, noticed a warning email in her inbox claiming her online access has been disabled. However, she noticed this was odd as she is still able to access her online business platforms and inbox. She decided to forward the email in question to the security team's phishing mailbox for review.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge1.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge1.eml</code><ul></li></p>",
 
 
   "questions": [
       {
-          "question": "Based on the contents of the email header, what was the full <b>date and time</b> of the email delivery?",
+          "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
           "type": "text_input",
           "hint": "Check the contents of the <b>Date</b> header.",
           "placeholder": "***, ** *** **** **:**:** -****",
@@ -43,14 +43,14 @@
           "correct_answers": ["social201511138@social.helwan.edu.eg", "<social201511138@social.helwan.edu.eg>"]  
       },
       {
-          "question": "What is the email address to which bounced emails will be sent?",
+          "question": "What email address is used for receiving bounced emails?",
           "type": "text_input",
           "hint": "This is also sometimes known as the bounce address or the reverse path.",
           "placeholder": "Enter your answer here",
           "correct_answers": ["social201511138@social.helwan.edu.eg"]  
       },
       {
-          "question": "What is the sender's IP address?",
+          "question": "What is the IP address of the sender's email server?",
           "type": "text_input",
           "hint": "Look for the IP address within the <b>Received</b> headers or within a custom <b>X-Header</b>.",
           "placeholder": "**.***.**.**",
@@ -64,10 +64,57 @@
           "correct_answers": ["mail-am6eur05on2060.outbound.protection.outlook.com"]  
       },
       {
+        "question": "What corporation owns the sender's IP address?",
+        "type": "text_input",
+        "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
+        "placeholder": "Enter your answer here",
+        "correct_answers": ["Microsoft Corporation", "Microsoft", " Netherlands Amsterdam Microsoft Corporation"]  
+    },
+    {
+        "question": "What was the result of the SPF check?",
+        "type": "text_input",
+        "hint": "Check the <b>Received-SPF</b> or the <b>Authentication-Results</b> header.",
+        "placeholder": "Enter the email's recipient address",
+        "correct_answers": ["pass"]  
+    },
+    {
+        "question": "What is the full SPF record of the sender's domain?",
+        "type": "text_input",
+        "hint": "Run <code>nslookup -type=txt</code> against the domain previously identified in the <b>Return-Path</b>.",
+        "placeholder": "*=**** *******:***.***********.*******.*** -***",
+        "correct_answers": ["v=spf1 include:spf.protection.outlook.com -all"]  
+    },
+      {
           "question": "What is email's Message ID?",
           "type": "text_input",
           "placeholder": "Enter your answer here",
           "correct_answers": ["<JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6>", "JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6"]  
-      }
+      },
+      {
+        "question": "What type of encoding was used to encode the email body content?",
+        "type": "text_input",
+        "hint": "Look for any email headers related to content encoding.",
+        "placeholder": "Enter your answer here",
+        "correct_answers": ["base64", "base 64", "base 64 encoding", "base64 encoding", "base-64", "base-64 encoding"]  
+    },
+    {
+        "question": "In <b>defanged</b> format, what is the <b>second</b> URL extracted from the email?",
+        "type": "text_input",
+        "hint": "Use <a href=\"https://gchq.github.io/CyberChef/\" target=\"_blank\">CyberChef</a> to defang the URL.",
+        "placeholder": "*****[***]*[*]***[*]***[*]**[*]****[*]************[*]***/***************/",
+        "correct_answers": ["hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812/", "hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812"]  
+    },
+    {
+        "question": "Perform a VirusTotal scan on the URL. What verdict did Fortinet assign to it?",
+        "type": "text_input",
+        "placeholder": "Enter your answer here",
+        "correct_answers": ["Phishing"]  
+    },
+    {
+        "question": "<b>[Yes or No]</b> - After your analysis, is this email genuine?",
+        "type": "text_input",
+        "placeholder": "Enter your answer here",
+        "correct_answers": ["no"]  
+    }
   ]
 }
