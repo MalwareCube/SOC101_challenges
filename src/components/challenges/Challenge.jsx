@@ -10,7 +10,7 @@ const Challenge = ({ data }) => {
         <div>
         <div className="container">
 
-        <div className="header">
+            <div className="header">
                 <div className="header_breadcrumb">
                     <div className="header_breadcrumb_item">SOC 101 Challenges</div>
                     <Link to={`/c/${data.uid}`} className="header_breadcrumb_item">{data.title}</Link>
