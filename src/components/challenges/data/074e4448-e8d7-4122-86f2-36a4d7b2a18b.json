@@ -1,8 +1,6 @@
 {
   "uid": "074e4448-e8d7-4122-86f2-36a4d7b2a18b",
   "title": "Phishing Analysis Challenge 1",
-  "domain": 1,
-  "order": 0,
   "instructions": "<p>You are a SOC Analyst at Mighty Solutions, Inc. An account executive, Dana Derringer, noticed a warning email in her inbox claiming her online access has been disabled. However, she noticed this was odd as she is still able to access her online business platforms and inbox. She decided to forward the email in question to the security team's phishing mailbox for review.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge1.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge1.eml</code><ul></li></p>",
 
 
@@ -18,14 +16,14 @@
           "question": "What is the subject of the email?",
           "type": "text_input",
           "hint": "Check the contents of the <b>Subject</b> header.",
-          "placeholder": "Enter the email's subject line",
+          "placeholder": "Enter your answer here",
           "correct_answers": ["Your account has been flagged for unusual activity"]  
       },
       {
           "question": "Who was the email sent to?",
           "type": "text_input",
           "hint": "Check the contents of the <b>To</b> header.",
-          "placeholder": "Enter the email's recipient address",
+          "placeholder": "Enter your answer here",
           "correct_answers": ["dderringer@mighty-solutions.net"]  
       },
       {
@@ -54,7 +52,7 @@
           "type": "text_input",
           "hint": "Look for the IP address within the <b>Received</b> headers or within a custom <b>X-Header</b>.",
           "placeholder": "**.***.**.**",
-          "correct_answers": ["40.107.22.60"]  
+          "correct_answers": ["40.107.22.60", "40[.]107[.]22[.]60"]  
       },
       {
           "question": "What is the resolved hostname of the sender's IP address?",
@@ -68,13 +66,13 @@
         "type": "text_input",
         "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
         "placeholder": "Enter your answer here",
-        "correct_answers": ["Microsoft Corporation", "Microsoft", " Netherlands Amsterdam Microsoft Corporation"]  
+        "correct_answers": ["Microsoft Corporation", "Microsoft", "Netherlands Amsterdam Microsoft Corporation"]  
     },
     {
         "question": "What was the result of the SPF check?",
         "type": "text_input",
         "hint": "Check the <b>Received-SPF</b> or the <b>Authentication-Results</b> header.",
-        "placeholder": "Enter the email's recipient address",
+        "placeholder": "Enter your answer here",
         "correct_answers": ["pass"]  
     },
     {
@@ -91,7 +89,7 @@
           "correct_answers": ["<JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6>", "JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6"]  
       },
       {
-        "question": "What type of encoding was used to encode the email body content?",
+        "question": "What type of encoding was used to transfer the email body content?",
         "type": "text_input",
         "hint": "Look for any email headers related to content encoding.",
         "placeholder": "Enter your answer here",
@@ -101,7 +99,7 @@
         "question": "In <b>defanged</b> format, what is the <b>second</b> URL extracted from the email?",
         "type": "text_input",
         "hint": "Use <a href=\"https://gchq.github.io/CyberChef/\" target=\"_blank\">CyberChef</a> to defang the URL.",
-        "placeholder": "*****[***]*[*]***[*]***[*]**[*]****[*]************[*]***/***************/",
+        "placeholder": "*****[://]*[*]***[*]***[*]**[*]****[*]************[*]***/***************/",
         "correct_answers": ["hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812/", "hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812"]  
     },
     {

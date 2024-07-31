@@ -1,0 +1,118 @@
+{
+    "uid": "5e3f6ff6-46f7-4042-a969-34fd16451328",
+    "title": "Phishing Analysis Challenge 2",
+    "instructions": "<p>You are a SOC Analyst at Global Logistics. Emily Nguyen, a member of the marketing team, recently had trouble signing into her Dropbox account after trying to access it for the first time in months and reached out to her manager for assistance. The next day, she received an email that claims a password change request was made for her Dropbox account. The email includes a link for resetting her password, but Emily is unsure if the request is legitimate. Concerned about potential phishing, she has forwarded the email to the security team for analysis.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge2.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge2.eml</code><ul></li></p>",
+  
+  
+    "questions": [
+        {
+            "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>Date</b> header.",
+            "placeholder": "***, ** *** **** **:**:** +****",
+            "correct_answers": ["Sun, 12 May 2024 04:10:52 +0000", "Sun, 12 May 2024 04:10:52", "Sun 12 May 2024 04:10:52", "5/12/24, 00:10"]  
+        },
+        {
+            "question": "What is the subject of the email?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>Subject</b> header.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Reset your Dropbox password"]  
+        },
+        {
+            "question": "Who was the email sent to?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>To</b> header.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["emily.nguyen@glbllogistics.co"]  
+        },
+        {
+            "question": "Based on the sender's display name, who does the email claim to be from?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>From</b> header. Specifically, the display name portion.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Dropbox"]  
+        },
+        {
+            "question": "What is the sender's email address?",
+            "type": "text_input",
+            "hint": "Check the contents of the <b>From</b> header. Specifically, the email address portion.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["no-reply@dropbox.com", "<no-reply@dropbox.com>"]  
+        },
+        {
+            "question": "What email address is used for receiving bounced emails?",
+            "type": "text_input",
+            "hint": "This is also sometimes known as the bounce address or the reverse path.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@email.dropbox.com", "<0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@email.dropbox.com>"]  
+        },
+        {
+            "question": "What is the IP address of the sender's email server?",
+            "type": "text_input",
+            "hint": "Look for the IP address within the <b>Received</b> headers.",
+            "placeholder": "**.***.**.**",
+            "correct_answers": ["54.240.60.143", "54[.]240[.]60[.]143"]  
+        },
+        {
+            "question": "What is the resolved hostname of the sender's IP address?",
+            "type": "text_input",
+            "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["a60-143.smtp-out.us-west-2.amazonses.com "]  
+        },
+        {
+          "question": "What is the Autonomous System Number (ASN) that owns this IP address?",
+          "type": "text_input",
+          "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
+          "placeholder": "Enter your answer here",
+          "correct_answers": ["AS16509", "16509"]  
+      },
+      {
+          "question": "What was the result of the SPF check?",
+          "type": "text_input",
+          "hint": "Check the <b>Received-SPF</b> or the <b>Authentication-Results</b> header.",
+          "placeholder": "Enter your answer here",
+          "correct_answers": ["pass"]  
+      },
+      {
+          "question": "What is the full SPF record of the sender's domain?",
+          "type": "text_input",
+          "hint": "Run <code>nslookup -type=txt</code> against the domain previously identified in the <b>Return-Path</b>.",
+          "placeholder": "*=**** *******:*********.*** ~***",
+          "correct_answers": ["v=spf1 include:amazonses.com ~all"]  
+      },
+        {
+            "question": "What is email's Message ID?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["<0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@us-west-2.amazonses.com>", "0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@us-west-2.amazonses.com"]  
+        },
+        {
+          "question": "What type of encoding was used to transfer the email body content?",
+          "type": "text_input",
+          "hint": "Look for any email headers related to content encoding.",
+          "placeholder": "Enter your answer here",
+          "correct_answers": ["quoted-printable", "quoted printable"]  
+      },
+      {
+          "question": "Look in the <code>plaintext</code> version of the email. In <b>defanged</b> format, what is the <b>first</b> URL extracted from the email?",
+          "type": "text_input",
+          "hint": "Use <a href=\"https://gchq.github.io/CyberChef/\" target=\"_blank\">CyberChef</a> to defang the URL. Make sure you also decode any content transfer encoding first!",
+          "placeholder": "*****[://]***[.]*******[.]***/*/************--**************-******/******_******",
+          "correct_answers": ["hxxps[://]www[.]dropbox[.]com/l/ABCIzswwTTJ9--CxR05fYXX35pPA-Y0m3PY/forgot_finish"]  
+      },
+      {
+          "question": "Perform a Cisco Talos lookup on the <b>base domain</b> of the URL in the previous question. What is its web reputation?",
+          "type": "text_input",
+          "placeholder": "Enter your answer here",
+          "correct_answers": ["Favorable", "Favourable"]  
+      },
+      {
+          "question": "<b>[Yes or No]</b> - After your analysis, is this email genuine?",
+          "type": "text_input",
+          "placeholder": "Enter your answer here",
+          "correct_answers": ["yes"]  
+      }
+    ]
+  }
