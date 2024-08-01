@@ -1,0 +1,85 @@
+{
+    "uid": "bb2d4b38-3f4f-4639-8b09-ef17bb229b33",
+    "title": "tcpdump Challenge 1",
+    "instructions": "<p>Now it's time to put your <b>tcpdump</b> and command-line analysis skills to the test!</p><p>The SOC received an alert that an endpoint was exhibiting abnormal behavior as it triggered several detections, pointing to a potential info-stealer malware variant. As a SOC Analyst at Astley Financial, review the <code>tcpdump_challenge.pcap</code> packet capture and analyze its contents to complete the report below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/01_tcpdump/Challenges/tcpdump_challenge.pcap</code><ul></li></p>",
+  
+  
+    "questions": [
+        {
+            "question": "How many total packets are in the <code>tcpdump_challenge.pcap</code> packet capture?",
+            "hint": "Read in the packet capture. The <code>--count</code> argument is your friend!",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["1344", "1344 packets"]  
+        },
+        {
+            "question": "How many <b>ICMP</b> packets are in the challenge.pcap packet capture?",
+            "type": "text_input",
+            "hint": "Read in the packet capture. Filter the protocol. The <code>--count</code> argument is your friend!",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["132", "132 packets"]  
+        },
+        {
+            "question": "What is the ASN of the destination IP address that the endpoint was pinging?",
+            "type": "text_input",
+            "hint": "First, filter the ICMP packets. The Autonomous System Number (ASN) of an IP address can usually be found by performing an IP lookup.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["AS13335", "13335"]  
+        },
+        {
+            "question": "How many HTTP <b>POST</b> requests were made in the packet capture?",
+            "type": "text_input",
+            "hint": "First, read in the packet capture. Then, consider using a pattern matching command to search for the word \"POST\". Count the number of returned matches.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["1"]  
+        },
+        {
+            "question": "Look for any credentials within the payloads of any HTTP packets, what is the <b>password</b> you uncover?",
+            "type": "text_input",
+            "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for any relevant keywords like usernames or passwords.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["ilovecats9102"]  
+        },
+        {
+            "question": "Aside from HTTP on port 80, what is the other most frequent well-known destination port number?",
+            "type": "text_input",
+            "hint": "Use various command-line utilities to extract the destination port numbers from these packets, count the occurrences of each unique port, and then sort the counts in descending order. <b>Tip:</b> Don't forget the <code>-n</code> option to skip port name resolution and focus on the port numbers.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["21", "ftp", "file transfer protocol"]  
+        },
+        {
+            "question": "What set of valid credentials did the endpoint use to access the file sharing server? <i>(Format username:password)</i>",
+            "type": "text_input",
+            "hint": "The file transfer protocol takes in a <b>USER</b> and a <b>PASS</b> command as authentication.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["demo:password", "demo password"]  
+        },
+        {
+            "question": "What is the name of the file that was <b>retrieved</b> from the file sharing server?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["readme.txt", "readme"]  
+        },
+        {
+            "question": "Based on the unique <b>User-Agent</b> string found within the HTTP requests, what is the name of the related malware the endpoint might be infected with?",
+            "type": "text_input",
+            "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for the relevant HTTP header name and print the unique results. Perform OSINT (Google) the abnormal looking string.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["lumma", "lummac2", "lumma c2", "lumma stealer", "lummac2 stealer", "Lumma Info-Stealer", "Lumma Info Stealer"]  
+        },
+        {
+            "question": "In <b>defanged format</b>, what was the full URL that the endpoint tried to connect to using the user agent identified above?",
+            "type": "text_input",
+            "hint": "Search through the printed packets for the User-Agent string identified in the previous question. Open up more lines of the packet (<code>grep -A</code>) and identify an HTTP header that indicates a redirect URL.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["hxxps[://]t[.]me/+zz0192lskaaa"]  
+        },
+        {
+            "question": "<b>[Bonus]</b> - What is the full title of the YouTube video that the user requested?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "hint": "Remember the <code>Location</code> HTTP header? Also, sorry in advance. 😂",
+            "correct_answers": ["Rick Astley - Never Gonna Give You Up (Official Music Video)", "Rick Astley - Never Gonna Give You Up", "Never Gonna Give You Up", "rick roll"]
+        }
+    ]
+  }
