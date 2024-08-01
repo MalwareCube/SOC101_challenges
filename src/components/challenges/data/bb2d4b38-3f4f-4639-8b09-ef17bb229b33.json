@@ -1,7 +1,7 @@
 {
     "uid": "bb2d4b38-3f4f-4639-8b09-ef17bb229b33",
     "title": "tcpdump Challenge 1",
-    "instructions": "<p>Now it's time to put your <b>tcpdump</b> and command-line analysis skills to the test!</p><p>The SOC received an alert that an endpoint was exhibiting abnormal behavior as it triggered several detections, pointing to a potential info-stealer malware variant. As a SOC Analyst at Astley Financial, review the <code>tcpdump_challenge.pcap</code> packet capture and analyze its contents to complete the report below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/01_tcpdump/Challenges/tcpdump_challenge.pcap</code><ul></li></p>",
+    "instructions": "<p>Now it's time to put your <b>tcpdump</b> and command-line analysis skills to the test!</p><p>The SOC received an alert that an endpoint was exhibiting abnormal behavior as it triggered several detections, pointing to a potential info-stealer malware variant. As a SOC Analyst at <i>Astley Financial</i>, review the <code>tcpdump_challenge.pcap</code> packet capture and analyze its contents to complete the report below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/01_tcpdump/Challenges/tcpdump_challenge.pcap</code><ul></li></p>",
   
   
     "questions": [

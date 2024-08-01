@@ -1,7 +1,7 @@
 {
   "uid": "074e4448-e8d7-4122-86f2-36a4d7b2a18b",
   "title": "Phishing Analysis Challenge 1",
-  "instructions": "<p>You are a SOC Analyst at Mighty Solutions, Inc. An account executive, Dana Derringer, noticed a warning email in her inbox claiming her online access has been disabled. However, she noticed this was odd as she is still able to access her online business platforms and inbox. She decided to forward the email in question to the security team's phishing mailbox for review.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge1.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge1.eml</code><ul></li></p>",
+  "instructions": "<p>You are a SOC Analyst at <i>Mighty Solutions</i>, Inc. An account executive, Dana Derringer, noticed a warning email in her inbox claiming her online access has been disabled. However, she noticed this was odd as she is still able to access her online business platforms and inbox. She decided to forward the email in question to the security team's phishing mailbox for review.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge1.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge1.eml</code><ul></li></p>",
 
 
   "questions": [
@@ -79,7 +79,7 @@
         "question": "What is the full SPF record of the sender's domain?",
         "type": "text_input",
         "hint": "Run <code>nslookup -type=txt</code> against the domain previously identified in the <b>Return-Path</b>.",
-        "placeholder": "*=**** *******:***.***********.*******.*** -***",
+        "placeholder": "*=**** *******:***.**********.*******.*** -***",
         "correct_answers": ["v=spf1 include:spf.protection.outlook.com -all"]  
     },
       {

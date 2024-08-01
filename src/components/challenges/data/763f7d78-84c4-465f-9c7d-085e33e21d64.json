@@ -1,7 +1,7 @@
 {
     "uid": "763f7d78-84c4-465f-9c7d-085e33e21d64",
     "title": "Phishing Analysis Challenge 3",
-    "instructions": "<p>You are a SOC Analyst at Global Logistics. The SOC received an alert about a quarantined email that was flagged by the company's email gateway solution. The email was sent to Emily Nguyen, a member of the marketing team, from her friend Alexia Barry. As the analyst assigned to this ticket, your task is to review the email to determine if the email is safe to release to Emily's inbox or if further action is needed.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge3.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge3.eml</code><ul></li></p>",
+    "instructions": "<p>You are a SOC Analyst at <i>Global Logistics</i>. The SOC received an alert about a quarantined email that was flagged by the company's email gateway solution. The email was sent to Emily Nguyen, a member of the marketing team, from her friend Alexia Barry. As the analyst assigned to this ticket, your task is to review the email to determine if the email is safe to release to Emily's inbox or if further action is needed.</p><p>Using what you've learned within this domain, perform a detailed email analysis on the <code>challenge3.eml</code> file to answer the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>01_Phishing_Analysis/Challenges/challenge3.eml</code><ul></li></p>",
   
   
     "questions": [
