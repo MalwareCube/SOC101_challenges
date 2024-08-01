@@ -1,0 +1,87 @@
+{
+    "uid": "7265ec1c-9773-4c7c-9ed4-2ea26e19f346",
+    "title": "Wireshark Challenge 1",
+    "instructions": "<p>The SOC at BulbaTech Innovations received an alert of abnormal traffic patterns and a high number of repeated queries originating from one of their external-facing endpoints (<code>172.16.1.16</code>).</p><p>Using your newfound Wireshark skills, perform network traffic analysis on the <code>wireshark_challenge.pcap</code> packet capture to produce findings for the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/02_Wireshark/Challenges/wireshark_challenge.pcap</code><ul></li></p>",
+  
+  
+    "questions": [
+        {
+            "question": "How many total packets are in the <code>wireshark_challenge.pcap</code> packet capture?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["39106", "39106 packets"]  
+        },
+        {
+            "question": "What was the first domain name queried and resolved in the capture?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["webmasterdev[.]com", "webmasterdev.com"]  
+        },
+        {
+            "question": "What is the associated IP address of the domain name?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["184.168.98.68"]  
+        },
+        {
+            "question": "How many http packets are contained in the capture file?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["8"]  
+        },
+        {
+            "question": "What is the relative path the victim accessed on the web server to request a file for download?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["9GQ5A8/6ctf5JL", "/9GQ5A8/6ctf5JL"]  
+        },
+        {
+            "question": "Based on the response header, what file type or format does the web server claim the downloaded file to be?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["image/gif", "gif", ".gif"]  
+        },
+        {
+            "question": "However, what is the actual file signature or magic bytes contained in the file?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["MZ"]  
+        },
+        {
+            "question": "What command-line utility or program was used by the victim to download the file?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Windows PowerShell", "powershell", "power shell", "windows power shell"]  
+        },
+        {
+            "question": "What is the <b>sha256</b> hash of the downloaded file?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["9b8ffdc8ba2b2caa485cca56a82b2dcbd251f65fb30bc88f0ac3da6704e4d3c6"]  
+        },
+        {
+            "question": "Submit the uncovered hash to VirusTotal. Based on the popular threat label and tags, what type of malware did the endpoint get infected with?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["trojan.midie/pikabot", "pikabot", "midie", "zenpak"]  
+        },
+        {
+            "question": "What <b>protocol</b> makes up the majority of <b>UDP</b> packets?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["dns", "domain name system"]  
+        },
+        {
+            "question": "Look at the domain names that were queried within the capture. In <b>defanged</b> format, what is the base domain name that is continually queried?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["steasteel[.]net"]  
+        },
+        {
+            "question": "Read up on <b>MITRE ATT&CK ID</b> <code>T1071.004</code>. What is the attack technique we’re likely seeing in the PCAP file often known as?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["DNS tunneling", "tunneling"]  
+        }
+    ]
+  }

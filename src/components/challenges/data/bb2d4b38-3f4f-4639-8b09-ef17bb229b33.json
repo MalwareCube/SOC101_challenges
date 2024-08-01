@@ -63,7 +63,7 @@
         {
             "question": "Based on the unique <b>User-Agent</b> string found within the HTTP requests, what is the name of the related malware the endpoint might be infected with?",
             "type": "text_input",
-            "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for the relevant HTTP header name and print the unique results. Perform OSINT (Google) the abnormal looking string.",
+            "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for the relevant HTTP header name and print the unique results. Perform OSINT on the abnormal looking string (Google).",
             "placeholder": "Enter your answer here",
             "correct_answers": ["lumma", "lummac2", "lumma c2", "lumma stealer", "lummac2 stealer", "Lumma Info-Stealer", "Lumma Info Stealer"]  
         },
