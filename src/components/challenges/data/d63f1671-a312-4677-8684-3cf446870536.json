@@ -1,0 +1,76 @@
+{
+    "uid": "d63f1671-a312-4677-8684-3cf446870536",
+    "title": "Log Analysis Challenge 1",
+    "instructions": "<p>a</p><h3>Challenge File:</h3><p><ul><li><code>04_SIEM/01_Log_Analysis/Challenges/challenge.log</code><ul></li></p>",
+  
+  
+    "questions": [
+        {
+            "question": "How many total events were logged in the file?",
+            "type": "text_input",
+            "hint": "The <code>wc</code> command can be useful here.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["343", "343 events", "343 total events"]  
+        },
+        {
+            "question": "What is the full timestamp of the <b>last</b> event in the file?",
+            "type": "text_input",
+            "hint": "The <code>tail</code> command can be used to print the last few lines in a file. Pair it with <code>-n</code> to specify the number of lines you want to pull back.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["[18/Jul/2024:15:59:25 -0400]", "18/Jul/2024:15:59:25 -0400"]  
+        },
+        {
+            "question": "What are the top 3 IP addresses found within the log file <i>(in descending order)</i>?",
+            "type": "text_input",
+            "hint": "Refer to the trick to extract (<code>cut</code>) columns and <code>sort</code> their <b>unique</b> values.",
+            "placeholder": "Format: IP, IP, IP",
+            "correct_answers": ["182.87.64.64, 53.64.228.139, 85.165.170.49", "182.87.64.64 53.64.228.139 85.165.170.49"]  
+        },
+        {
+            "question": "What is the <b>count</b> of the IP address with the highest connections?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["23"]  
+        },
+        {
+            "question": "How many different user agent strings are found in the log file?",
+            "type": "text_input",
+            "hint": "Refer to the trick to extract (<code>cut</code>) columns and <code>sort</code> their <b>unique</b> values.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["3", "three"]  
+        },
+        {
+            "question": "Which user agent string sticks out as suspicious?",
+            "type": "text_input",
+            "hint": "Look for subtle mispellings or typos that may suggest an attacker is trying to impersonate a benign string.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Mozilla/5.0 (Widows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"]  
+        },
+        {
+            "question": "What is the line number of the log event that returned an <b>HTTP status code</b> of <b>404</b>?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["76"]  
+        },
+        {
+            "question": "What web-based attack can you identify based on the <b>URL query parameters</b>?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["sqli", "SQL injection"]  
+        },
+        {
+            "question": "What is the <b>name</b> of the vulnerable <b>URL parameter</b>?",
+            "type": "text_input",
+            "hint": "A question mark in a URL signifies the beginning of a query string, which is used to pass data to other web applications. A URL parameter is typically constructed of a key (name) and a corresponding value pair.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["q"]  
+        },
+        {
+            "question": "The attacker attempted a number of different SQL injection attacks. Based on other indicators in the event logs, what was the <b>full timestamp</b> of the potentially successful attempt?",
+            "type": "text_input",
+            "hint": "Look for anomalies such as sudden changes in HTTP response behavior, including status codes or <b>response length</b>, which can indicate a successful attack compared to failed attempts.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["[18/Jul/2024:15:58:52 -0400]", "18/Jul/2024:15:58:52 -0400"]  
+        }
+    ]
+  }
