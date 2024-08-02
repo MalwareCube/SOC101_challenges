@@ -1,0 +1,92 @@
+{
+    "uid": "65889869-d947-44d8-9241-a859a07ace91",
+    "title": "Linux Endpoint Analysis Challenge 1",
+    "instructions": "<p>You've been assigned to remotely investigate a compromised Linux server as part of a live incident response scenario. The affected system has been imaged and all necessary forensic artifacts have been gathered. Your objective now is to investigate the scope of the compromise and identify any persistence mechanisms installed by the attacker.</p> <p>Use your endpoint analysis skills to conduct the investigation and answer the questions below. <b>Remember</b>, many investigative commands will need to be run with <code>sudo</code> to return comprehensive results.</p><h3>Challenge File:</h3><p><ul><li><code>03_Endpoint_Security/Linux/Challenges/challenge.elf</code></li></ul></p><p>To start the challenge, run <code>sudo ./challenge.elf</code> in a terminal window. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. After running the executable, you can open additional command prompt windows to complete the investigation.</p><p>After completing the challenge, you can clean up and restore the system by terminating the <code>challenge.elf</code> process (Press Ctrl + C).</p>",
+  
+  
+    "questions": [
+        {
+            "question": "Simulate the compromise by running <code>sudo ./challenge.elf</code> in a terminal window. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. Enter \"<b>done</b>\" to continue.",
+            "type": "text_input",
+            "placeholder": "Enter \"done\" to continue",
+            "correct_answers": ["done"]
+        },
+        {
+            "question": "What <b>port</b> is the malware <b>listening</b> on?",
+            "type": "text_input",
+            "hint": "The <code>sudo netstat</code> command can be paired with several useful options to display network connections and listening ports (<code>-l</code>).",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["31337", "port 31337"]
+        },
+        {
+            "question": "What is the <b>Process ID (PID)</b> of the malware? <i>This answer cannot be verified, but it's required for the next question(s).</i>",
+            "type": "text_input",
+            "hint": "The <code>netstat</code> command can be paired with several useful options to display network connections, listening ports, and their associated Process IDs (PIDs).",
+            "placeholder": "Enter your answer here"
+        },
+        {
+            "question": "What is the <b>name</b> of the binary or executable associated with the network listener?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["kitty.meow"]
+        },
+        {
+            "question": "What is the <b>full path</b> of the previously identified binary?",
+            "type": "text_input",
+            "hint": "There are several ways to find the path. However, one way involves using the <code>lsof</code> command against the previously identified Process ID (PID).",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["/tmp/kitty.meow", "/tmp/kitty.meow (deleted)"]
+        },
+        {
+            "question": "Run the <code>ps</code> command against the previously identified malicious Process ID (PID). What is the full command line invocation of this binary?",
+            "type": "text_input",
+            "hint": "The <code>-F</code> argument can be used to view the output in full format.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["/tmp/kitty.meow -l -p 31337"]
+        },
+        {
+            "question": "List the full <b>process tree</b> for the malicious process. What is the name of the <b>parent process</b> that spawned the malware?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["systemd"]
+        },
+        {
+            "question": "What is the SHA-256 hash value of the malware? <b>Note:</b> this is not asking about <code>challenge.elf</code>.",
+            "type": "text_input",
+            "hint": "You might have noticed that the malware was deleted immediately upon executing! However, you can still query binaries and executables held open by active processes through a specific <b>virtual filesystem</b>.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["2a6fac3d98e090468962ef18003cb8b89fbffa7219917ca12567d5e42b156948"]
+        },
+        {
+            "question": "Extract all <b>printable string characters</b> from the binary. Review the results for any indicators such as risky objects, descriptions, comments, banners, or usage information. Based on these findings, what <b>utility or program</b> can you identify?",
+            "type": "text_input",
+            "hint": "The <code>strings</code> command is your friend here.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["nc", "netcat", "OpenBSD netcat"]
+        },
+        {
+            "question": "Examine the <b>system-wide cron jobs</b> configured on the local system. Identify any entries that may be malicious, indicating persistence mechanisms or continued compromise by the attacker. What is the <b>full file path</b> of the script that is executed?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["/tmp/exfiltr8.sh", "/exfiltr8.sh"]
+        },
+        {
+            "question": "Use a service like <a href=\"https://crontab.guru/\" target=\"_blank\">crontab.guru</a> to interpret the cron schedule. What is the specific <b>day</b> when this cron entry runs?",
+            "type": "text_input",
+            "placeholder": "Answer format: January 10",
+            "correct_answers": ["October 13", "13 October", "October 13th"]
+        },
+        {
+            "question": "Now, list <b>your own</b> user account's crontab entries. What <b>IP address</b> does the attacker's beacon reach out to?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["208.67.222.222"]
+        },
+        {
+            "question": "Excellent work! Clean up and restore the system by terminating the <code>challenge.elf</code> process (Press Ctrl + C). Afterwards, enter \"<b>done</b>\" to continue.",
+            "type": "text_input",
+            "placeholder": "Enter \"done\" to continue",
+            "correct_answers": ["done"]
+        }
+    ]
+  }
