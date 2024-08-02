@@ -20,14 +20,17 @@ const ShortAnswer = ({ data, index }) => {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission behavior
         
-        // Transform correct answers and submitted answer for comparison
-        const correctAnswers = data.correct_answers.map(answer => answer.toLowerCase().trim()); // Array of correct answers
-        const cleanedSubmittedAnswer = submittedAnswer.toLowerCase().trim(); // Cleaned submitted answer for comparison
-
-        // Check if the submitted answer is correct
-        const isSubmittedCorrect = correctAnswers.includes(cleanedSubmittedAnswer);
+        // Check if correct_answers exists and is an array with at least one element
+        const correctAnswers = data.correct_answers && Array.isArray(data.correct_answers) ? data.correct_answers.map(answer => answer.toLowerCase().trim()) : [];
+        
+        // Clean the submitted answer for comparison
+        const cleanedSubmittedAnswer = submittedAnswer.toLowerCase().trim();
+    
+        // Determine if the answer is correct
+        const isSubmittedCorrect = correctAnswers.length === 0 || correctAnswers.includes(cleanedSubmittedAnswer);
+        
         setIsCorrect(isSubmittedCorrect);
-
+    
         if (isSubmittedCorrect) {
             setShowHint(false); // Hide hint if answer is correct
         } else {
@@ -37,6 +40,7 @@ const ShortAnswer = ({ data, index }) => {
             }, 500);
         }
     };
+    
 
     // Check if hint is available
     const hasHint = data.hint && data.hint.trim() !== '';

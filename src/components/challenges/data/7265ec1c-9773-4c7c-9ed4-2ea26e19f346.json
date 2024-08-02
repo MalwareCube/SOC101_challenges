@@ -1,7 +1,7 @@
 {
     "uid": "7265ec1c-9773-4c7c-9ed4-2ea26e19f346",
     "title": "Wireshark Challenge 1",
-    "instructions": "<p>The SOC at <i>BulbaTech Innovations</i> received an alert of abnormal traffic patterns and a high number of repeated queries originating from one of their external-facing endpoints (<code>172.16.1.16</code>).</p><p>Using your newfound Wireshark skills, perform network traffic analysis on the <code>wireshark_challenge.pcap</code> packet capture to produce findings for the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/02_Wireshark/Challenges/wireshark_challenge.pcap</code><ul></li></p>",
+    "instructions": "<p>The SOC at <i>BulbaTech Innovations</i> received an alert of abnormal traffic patterns and a high number of repeated queries originating from one of their external-facing endpoints (<code>172.16.1.16</code>).</p><p>Using your newfound Wireshark skills, perform network traffic analysis on the <code>wireshark_challenge.pcap</code> packet capture to produce findings for the report questions below.</p><h3>Challenge File:</h3><p><ul><li><code>02_Network_Security/02_Wireshark/Challenges/wireshark_challenge.pcap</code></li></ul></p>",
   
   
     "questions": [

@@ -1,7 +1,7 @@
 {
     "uid": "d63f1671-a312-4677-8684-3cf446870536",
     "title": "Log Analysis Challenge 1",
-    "instructions": "<p>During a recent system compromise investigation, the Security Operations Center at <i>Esquelle Eye Care</i> discovered a critical oversight—the SIEM forwarding agent had never been installed on their corporate website's web server. This mistake left the web server's log data unmonitored.</p><p>A System Administrator managed to extract the <b>Apache</b> access log file from the server and has sent it to you for analysis. Your task is to review the <code>challenge.log</code> file to determine the extent of the compromise, its origin, the attack vector, and the vulnerability that led to the incident.</p><h3>Challenge File:</h3><p><ul><li><code>04_SIEM/01_Log_Analysis/Challenges/challenge.log</code><ul></li></p>",
+    "instructions": "<p>During a recent system compromise investigation, the Security Operations Center at <i>Esquelle Eye Care</i> discovered a critical oversight—the SIEM forwarding agent had never been installed on their corporate website's web server. This mistake left the web server's log data unmonitored.</p><p>A System Administrator managed to extract the <b>Apache</b> access log file from the server and has sent it to you for analysis. Your task is to review the <code>challenge.log</code> file to determine the extent of the compromise, its origin, the attack vector, and the vulnerability that led to the incident.</p><h3>Challenge File:</h3><p><ul><li><code>04_SIEM/01_Log_Analysis/Challenges/challenge.log</code></li></ul></p>",
   
   
     "questions": [
