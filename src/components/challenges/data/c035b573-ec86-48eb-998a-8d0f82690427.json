@@ -1,0 +1,61 @@
+{
+    "uid": "c035b573-ec86-48eb-998a-8d0f82690427",
+    "title": "Windows Events Challenge 1",
+    "instructions": "<p>After noticing abnormal behavior on a Windows workstation, you have been provided with the <code>challenge.evtx</code> Security Event log file to analyze as part of an incident response investigation. Your task is to examine the log file and answer specific questions to understand the extent and nature of the security incident.</p><h3>Challenge File:</h3><p><ul><li><code>03_Endpoint_Security/Windows/Challenges/challenge.evtx</code></li></ul></p>",
+  
+  
+    "questions": [
+        {
+            "question": "What is the <b>hostname</b> of the computer that generated the logs in the <code>challenge.evtx</code> file?",
+            "type": "text_input",
+            "hint": "If you're using the Event Viewer, look for the <b>Computer</b> field.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["DESKTOP-1M5L0T9"]
+        },
+        {
+            "question": "What is the <b>Process ID (PID)</b> of the execution process that cleared the security event log?",
+            "type": "text_input",
+            "hint": "Open up the releated log based on its specific <b>Event ID</b>. Then, look for the <b>Execution ProcessID</b> field.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["1140"]
+        },
+        {
+            "question": "How many <b>logon events</b> are recorded in the logs?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["7"]
+        },
+        {
+            "question": "In <b>chronological order</b>, list the names of the accounts that were created within the logs.",
+            "type": "text_input",
+            "placeholder": "Answer format: User1, User2, etc.",
+            "correct_answers": ["Sysadmin, Administraor, backd00r"]
+        },
+        {
+            "question": "Which user account was <b>disabled</b> according to the event logs?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Sysadmin"]
+        },
+        {
+            "question": "Which user account was <b>deleted</b> according to the event logs?",
+            "type": "text_input",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["backd00r"]
+        },
+        {
+            "question": "In chronological order, list the <b>security-enabled local groups</b> that the <b>backdoor</b> user account was added to.",
+            "type": "text_input",
+            "hint": "There may be cases where the system can't resolve the <b>MemberName</b> field. However, you can still <b>correlate</b> a user account's unique Security Identifier (SID) from the user creation event.",
+            "placeholder": "Answer format: Group1, Group2, etc.",
+            "correct_answers": ["Administrators, Remote Desktop Users"]
+        },
+        {
+            "question": "Which user account was added to the <b>Backup Operators</b> group?",
+            "type": "text_input",
+            "hint": "There may be cases where the system can't resolve the <b>MemberName</b> field. However, you can still <b>correlate</b> a user account's unique Security Identifier (SID) from the user creation event.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["Sysadmin"]
+        }
+    ]
+  }
