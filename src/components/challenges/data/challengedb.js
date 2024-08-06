@@ -43,6 +43,10 @@ const challengedb = [
       id: "c5620534-6450-4f97-9ccb-1644fc3ebc8e",
       data: require('./c5620534-6450-4f97-9ccb-1644fc3ebc8e.json'),
     },
+    {
+      id: "f58d3f49-9bce-4e56-beb3-2488dfc3a31d",
+      data: require('./f58d3f49-9bce-4e56-beb3-2488dfc3a31d.json'),
+    },
   ];
 
   export default challengedb;
