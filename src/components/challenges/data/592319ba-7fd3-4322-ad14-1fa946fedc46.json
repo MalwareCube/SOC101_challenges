@@ -1,7 +1,7 @@
 {
     "uid": "592319ba-7fd3-4322-ad14-1fa946fedc46",
     "title": "Windows Endpoint Analysis Challenge 1",
-    "instructions": "<p>You've been assigned to remotely investigate a compromised Windows workstation as part of a live incident response scenario. The affected system has been imaged and all necessary forensic artifacts have been gathered. Your objective now is to investigate the scope of the compromise and identify any persistence mechanisms installed by the attacker.</p> <p>Use your endpoint analysis skills to conduct the investigation and answer the questions below.</p><h3>Challenge File:</h3><p><ul><li><code>03_Endpoint_Security/Windows/Challenges/challenge.exe</code></li></ul></p><p>To start the challenge, execute <code>challenge.exe</code> in an Administrator-level command prompt. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. After running the executable, you can open additional command prompt windows to complete the investigation.</p><p>After completing the challenge, you can clean up and restore the system by terminating the <code>challenge.exe</code> process (Press Ctrl + C). Then, run <code>challenge.exe -restore</code>.</p>",
+    "instructions": "<p>You've been assigned to remotely investigate a compromised Windows workstation as part of a live incident response scenario. The affected system has been imaged and all necessary forensic artifacts have been gathered. Your objective now is to investigate the scope of the compromise and identify any persistence mechanisms installed by the attacker.</p> <p>Use your endpoint analysis skills to conduct the investigation and answer the questions below.</p><h3>Challenge File:</h3><p><ul><li><code>03_Endpoint_Security/Windows/Challenges/challenge.exe</code></li></ul></p><p>To start the challenge, execute <code>challenge.exe</code> in an Administrator-level command prompt. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. After running the executable, you can open additional command prompt windows to complete the investigation.</p><p>After completing the challenge, you can clean up and restore the system by terminating the <code>challenge.exe</code> process (Press Ctrl + C). Then, run <code>challenge.exe -revert</code>.</p>",
   
   
     "questions": [
@@ -110,7 +110,7 @@
             "correct_answers": ["3:30:00 AM", "3", "3:30:00", "3:30 AM", "3AM", "3 AM"]
         },
         {
-            "question": "Excellent work! Clean up and restore the system by terminating the <code>challenge.exe</code> process (Press Ctrl + C). Then, run <code>challenge.exe -restore</code>. Afterwards, enter \"<b>done</b>\" to continue.",
+            "question": "Excellent work! Clean up and restore the system by terminating the <code>challenge.exe</code> process (Press Ctrl + C). Then, run <code>challenge.exe -revert</code>. Afterwards, enter \"<b>done</b>\" to continue.",
             "type": "text_input",
             "placeholder": "Enter \"done\" to continue",
             "correct_answers": ["done"]
