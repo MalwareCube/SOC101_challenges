@@ -6,12 +6,14 @@
   
     "questions": [
         {
+            "quid": "31837c8a",
             "question": "First, run the <code>strings</code> command against <code>HawkEye.exe.meow</code>. What is the <b>name</b> of the JPG file that is referenced in the binary?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["tmp1E2A.jpg"]
         },
         {
+            "quid": "d59ec670",
             "question": "Use the <b>name</b> of the JPG file to create a YARA detection rule for any executable files that match this string identifier. Run it against <code>HawkEye.exe.meow</code>. What is the offset location of the matching detection?",
             "type": "text_input",
             "placeholder": "*******",
@@ -19,6 +21,7 @@
             "correct_answers": ["0x1115d"]
         },
         {
+            "quid": "bd64034a",
             "question": "What is the decimal conversion (base 10 equivalent) of this hexadecimal offset?",
             "type": "text_input",
             "placeholder": "*****",
@@ -26,12 +29,14 @@
             "correct_answers": ["69981"]
         },
         {
+            "quid": "44af3606",
             "question": "Run the <code>Rules/rule1.yar</code> file against the entire <code>Samples</code> directory. Which file was detected?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["RevengeRAT.exe.meow", "./RevengeRAT.exe.meow"]
         },
         {
+            "quid": "54a38df6",
             "question": "Using the <code>rule1.yar</code> rule on the previously identified binary, how many individual string matches were detected?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -39,12 +44,14 @@
             "correct_answers": ["4", "four"]
         },
         {
+            "quid": "fa4691ee",
             "question": "Run the <code>strings</code> command against <code>FreeYoutubeDownloader.exe.meow</code>. What <b>base domain name</b> repeatedly appears in the output?",
             "type": "text_input",
             "placeholder": "********************.***",
             "correct_answers": ["youtubedownloadernew.com", "youtubedownloadernew.com"]
         },
         {
+            "quid": "87b76060",
             "question": "Use the previously identified <b>base domain name</b>, create a YARA detection rule for any executable files that match this string identifier. Run it against the <code>FreeYoutubeDownloader.exe.meow</code> binary. In <b>order of appearance</b> in the file, what are the <b>hexadecimal offsets</b> of the <b>two</b> matching detection strings?",
             "type": "text_input",
             "placeholder": "Answer format: *******, *******",
@@ -52,6 +59,7 @@
             "correct_answers": ["0x358fa, 0x35983", "0x358fa 0x35983"]
         },
         {
+            "quid": "6c5365fc",
             "question": "Thinking back to the <b>Pyramid of Pain</b>, it would be quite trivial for an attacker to change the name of the program and any references to the previously identified domain name. However, consider the <b>host artifacts</b> that this tool inherently interacts with to function. Which interesting or unique <b>registry key</b> is found in the <code>strings</code>?",
             "type": "text_input",
             "placeholder": "********\\*******\\******\\***",
@@ -59,12 +67,14 @@
             "correct_answers": ["SOFTWARE\\Borland\\Delphi\\RTL"]
         },
         {
+            "quid": "a6da0624",
             "question": "Create a YARA rule only to detect this <b>registry key</b>, and run it <b>recursively</b> against the <code>/YARA/Challenges/</code> folder. What <b>other</b> file(s) are detected? Only provide the name of the files, not the full path.",
             "type": "text_input",
             "placeholder": "Answer format: File1, File2, etc.",
             "correct_answers": ["ZmtsO2d, c2RmZ2R", "ZmtsO2d c2RmZ2R", "c2RmZ2R, ZmtsO2d", "c2RmZ2R ZmtsO2d"]
         },
         {
+            "quid": "e44a054b",
             "question": "Create a YARA rule to detect any <b>GIF89a</b> files <b>under 50 KB in size</b>. Run it <b>recursively</b> against the <code>/YARA/Challenges/</code> folder. Which file(s) are matched? Only provide the name of the files, not the full path.",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -72,6 +82,7 @@
             "correct_answers": ["vJ8AWaf"]
         },
         {
+            "quid": "d5d6413e",
             "question": "Create a YARA rule to detect any <b>GIF89a</b> files <b>over 50 KB in size</b>. Run it <b>recursively</b> against the <code>/YARA/Challenges/</code> folder. Which file(s) are matched? Only provide the name of the files, not the full path.",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -79,6 +90,7 @@
             "correct_answers": ["fEbZizl"]
         },
         {
+            "quid": "546c7366",
             "question": "Research the <b>file signature</b> or <b>magic bytes</b> pertaining to <b>OpenSSH private key</b> files. What is the hexadecimal string (hex signature) that can be used to detect this signature?",
             "type": "text_input",
             "placeholder": "** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **",
@@ -86,6 +98,7 @@
             "correct_answers": ["2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"]
         },
         {
+            "quid": "b2a97b4a",
             "question": "Create a YARA rule to parse through the content of <b>executables</b> and detect any embedded <b>OpenSSH private key files</b>. Run it <b>recursively</b> against the <code>/YARA/Challenges/</code> folder. Which file(s) are matched? Only provide the name of the files, not the full path.",
             "type": "text_input",
             "placeholder": "Answer format: File1, File2, etc.",

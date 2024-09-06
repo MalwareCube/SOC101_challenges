@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "90f864c5",
             "question": "How many total packets are in the <code>wireshark_challenge.pcap</code> packet capture?",
             "type": "text_input",
             "hint": "Look for a section that displays properties about the capture file.",
@@ -13,6 +14,7 @@
             "correct_answers": ["39106", "39106 packets"]  
         },
         {
+            "quid": "0a5d249d",
             "question": "What was the first domain name queried and resolved in the capture?",
             "type": "text_input",
             "hint": "Try using a display filter for the specified protocol.",
@@ -20,6 +22,7 @@
             "correct_answers": ["webmasterdev[.]com", "webmasterdev.com"]  
         },
         {
+            "quid": "d5d08860",
             "question": "What is the associated IP address of the domain name?",
             "type": "text_input",
             "hint": "The query response may contain the answer.",
@@ -27,18 +30,21 @@
             "correct_answers": ["184.168.98.68"]  
         },
         {
+            "quid": "217dba64",
             "question": "How many <b>HTTP</b> packets are contained in the capture file?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["8"]  
         },
         {
+            "quid": "688efa67",
             "question": "What is the <b>relative</b> path the victim accessed on the web server to request a file for download?",
             "type": "text_input",
             "placeholder": "/******/*******",
             "correct_answers": ["9GQ5A8/6ctf5JL", "/9GQ5A8/6ctf5JL"]  
         },
         {
+            "quid": "05ae330e",
             "question": "Based on the response header, what file type or format does the web server claim the downloaded file to be?",
             "type": "text_input",
             "hint": "Follow the <b>HTTP</b> stream, and look for the <b>Content-Type</b> response header.",
@@ -46,6 +52,7 @@
             "correct_answers": ["image/gif", "gif", ".gif"]  
         },
         {
+            "quid": "7aa81732",
             "question": "However, what is the actual file signature or magic bytes contained in the file?",
             "type": "text_input",
             "hint": "Magic bytes, also referred to as magic numbers or <a href=\"https://en.wikipedia.org/wiki/List_of_file_signatures\" target=\"_blank\">file signatures</a>, are sequences of bytes located at the very beginning of a file. They serve as a unique identifier for the file's format or type.",
@@ -53,6 +60,7 @@
             "correct_answers": ["MZ"]  
         },
         {
+            "quid": "053bbf1c",
             "question": "What command-line utility or program was used by the victim to download the file?",
             "type": "text_input",
             "hint": "Check the request headers.",
@@ -60,6 +68,7 @@
             "correct_answers": ["Windows PowerShell", "powershell", "power shell", "windows power shell", "WindowsPowerShell", "Windows Power Shell 5.1", "windows-power-shell"]  
         },
         {
+            "quid": "d959e37b",
             "question": "What is the <b>sha256</b> hash of the downloaded file?",
             "type": "text_input",
             "hint": "You may need to export an HTTP object contained within the packet capture.",
@@ -67,18 +76,21 @@
             "correct_answers": ["9b8ffdc8ba2b2caa485cca56a82b2dcbd251f65fb30bc88f0ac3da6704e4d3c6"]  
         },
         {
+            "quid": "7634f3b3",
             "question": "Submit the uncovered hash to VirusTotal. Based on the popular threat label and tags, what type of malware did the endpoint get infected with?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["trojan.midie/pikabot", "pikabot", "midie", "zenpak"]  
         },
         {
+            "quid": "2c739717",
             "question": "What <b>protocol</b> makes up the majority of <b>UDP</b> packets?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["dns", "domain name system"]  
         },
         {
+            "quid": "27a483df",
             "question": "Look at the domain names that were queried within the capture. In <b>defanged</b> format, what is the base domain name that is continually queried?",
             "type": "text_input",
             "hint": "It might be helpful to open up a DNS packet in the <b>Packet Details Pane</b> first. From there, look for the field that contains the queried domain name and add it as a column.",
@@ -86,6 +98,7 @@
             "correct_answers": ["steasteel[.]net", "dns[.]steasteel[.]net"]  
         },
         {
+            "quid": "665c2c2d",
             "question": "Read up on <b>MITRE ATT&CK ID</b> <code>T1071.004</code>. What is the attack technique we’re likely seeing in the PCAP file often known as?",
             "type": "text_input",
             "placeholder": "Enter your answer here",

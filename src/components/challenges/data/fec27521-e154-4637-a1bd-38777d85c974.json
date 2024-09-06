@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "67231a9d",
             "question": "First, investigate <code>snort_challenge.pcap</code> in <b>Wireshark</b> and identify any unique <b>User-Agent</b> strings. Upon doing so, what penetration testing tool did the attacker use to brute force the admin page of the web server?",
             "type": "text_input",
             "hint": "The <code>http.user_agent</code> filter can be used to limit the results. The <b>User-Agent</b> field can be applied as a column, which makes sorting the entries a lot easier.",
@@ -13,6 +14,7 @@
             "correct_answers": ["Hydra", "Mozilla/4.0 (Hydra)"]  
         },
         {
+            "quid": "9379098b",
             "question": "The login page on the web server responds with an <code>HTTP 401</code> status code for failed login attempts. Create a Snort rule to detect if <b>10 failed login attempts</b> (HTTP 401 response codes) occur <b>within a 30-second period</b> from the <b>same IP address</b>. How many alerts were logged?",
             "type": "text_input",
             "hint": "To create the detection rule, focus on matching the <code>HTTP 401</code> status code <b>(http_stat_code)</b> <b>from</b> server responses and set a <b>threshold</b> to track the number of occurrences from the same source IP within 30 seconds.",
@@ -20,6 +22,7 @@
             "correct_answers": ["174", "2"]  
         },
         {
+            "quid": "ceeeb301",
             "question": "When a login is successful, it results in an <code>HTTP 302</code> redirect to the admin portal. Create a Snort rule to detect any successful logins. What is the <b>UNIX epoch timestamp</b> of the attacker's first successful login?",
             "type": "text_input",
             "hint": "After generating the alert log, <code>tcpdump -tt</code> is one of the easiest ways to look at the packet's timestamp.",
@@ -27,6 +30,7 @@
             "correct_answers": ["1717795241.242056", "1717795241", "1717795241242056", "1717795241.242056000"]  
         },
         {
+            "quid": "95bc5732",
             "question": "A common LFI payload is to include the string <code>../</code> within URL parameters to attempt to traverse directories and access restricted files or directories outside of the web root. Create a Snort rule to detect any packets <b>with this string</b> in the <b>Request URI</b>. How many detections or alerts were logged?",
             "type": "text_input",
             "hint": "To create the detection rule, look for the <code>../</code> or <code>2E 2E 2F</code> string in the <b>HTTP request URI (http_uri)</b> to identify potential Local File Inclusion (LFI) attempts. Use Snort's content matching feature to detect this pattern.",
@@ -34,6 +38,7 @@
             "correct_answers": ["5"]  
         },
         {
+            "quid": "df8f0ff5",
             "question": "By abusing the Local File Inclusion (LFI) vulnerability on the admin panel, the attacker stole a private SSH key from the web server. Given the known <b>file signature</b> of an <b>OpenSSH private key file</b>, create a Snort rule to detect any instances of these private keys traversing the network. Apply this rule to analyze the provided PCAP file. What was the <b>Content-Length</b> of the HTTP response containing the private key file?",
             "type": "text_input",
             "hint": "To create the detection rule, match the specific signature of an <b>OpenSSH private key</b> in the network traffic by using the hexadecimal representation of the file's header. <a href=\"https://en.wikipedia.org/wiki/List_of_file_signatures\" target=\"_blank\">This resource</a> may come in handy. After creating the log file, open up the packet to find its <b>Content-Length</b> HTTP header.",
@@ -41,6 +46,7 @@
             "correct_answers": ["2134"]
         },
         {
+            "quid": "2da16626",
             "question": "After obtaining the private key, the attacker gained access to the web server using <b>SSH</b> and started exfiltrating sensitive data using <b>FTP</b>. Create a Snort rule to detect any <b>outgoing connections</b> to an <b>external FTP server outside of the <code>192.168.1.0/24</code> network range</b>. What is the <b>Autonomous System Number (ASN)</b> of the FTP server the attacker connected to?",
             "type": "text_input",
             "hint": "To create the detection rule, focus on identifying <b>outgoing FTP connections</b>. Use the appropriate IP range and port number to set up the rule.",

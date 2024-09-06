@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "077a7f1d",
             "question": "How many total packets are in the <code>tcpdump_challenge.pcap</code> packet capture?",
             "hint": "Read in the packet capture. The <code>--count</code> argument is your friend!",
             "type": "text_input",
@@ -13,6 +14,7 @@
             "correct_answers": ["1344", "1344 packets"]  
         },
         {
+            "quid": "9cbda42f",
             "question": "How many <b>ICMP</b> packets are in the challenge.pcap packet capture?",
             "type": "text_input",
             "hint": "Read in the packet capture. Filter the protocol. The <code>--count</code> argument is your friend!",
@@ -20,6 +22,7 @@
             "correct_answers": ["132", "132 packets"]  
         },
         {
+            "quid": "fea63286",
             "question": "What is the ASN of the destination IP address that the endpoint was pinging?",
             "type": "text_input",
             "hint": "First, filter the ICMP packets. The Autonomous System Number (ASN) of an IP address can usually be found by performing an IP lookup.",
@@ -27,6 +30,7 @@
             "correct_answers": ["AS13335", "13335"]  
         },
         {
+            "quid": "622b47b8",
             "question": "How many HTTP <b>POST</b> requests were made in the packet capture?",
             "type": "text_input",
             "hint": "First, read in the packet capture. Then, consider using a pattern matching command to search for the word \"POST\". Count the number of returned matches.",
@@ -34,6 +38,7 @@
             "correct_answers": ["1"]  
         },
         {
+            "quid": "e00ebec6",
             "question": "Look for any credentials within the payloads of any HTTP packets, what is the <b>password</b> you uncover?",
             "type": "text_input",
             "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for any relevant keywords like usernames or passwords.",
@@ -41,6 +46,7 @@
             "correct_answers": ["ilovecats9102"]  
         },
         {
+            "quid": "124a7545",
             "question": "Aside from HTTP on port 80, what is the other most frequent well-known destination port number?",
             "type": "text_input",
             "hint": "Use various command-line utilities to extract the destination port numbers from these packets, count the occurrences of each unique port, and then sort the counts in descending order. <b>Tip:</b> Don't forget the <code>-n</code> option to skip port name resolution and focus on the port numbers.",
@@ -48,6 +54,7 @@
             "correct_answers": ["21", "ftp", "file transfer protocol"]  
         },
         {
+            "quid": "7346acb0",
             "question": "What set of valid credentials did the endpoint use to access the file sharing server? <i>(Format username:password)</i>",
             "type": "text_input",
             "hint": "The file transfer protocol takes in a <b>USER</b> and a <b>PASS</b> command as authentication.",
@@ -55,12 +62,14 @@
             "correct_answers": ["demo:password", "demo password"]  
         },
         {
+            "quid": "b254ed92",
             "question": "What is the name of the file that was <b>retrieved</b> from the file sharing server?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["readme.txt", "readme"]  
         },
         {
+            "quid": "f8a131f8",
             "question": "Based on the unique <b>User-Agent</b> string found within the HTTP requests, what is the name of the related malware the endpoint might be infected with?",
             "type": "text_input",
             "hint": "This is a more involved task that requires printing the individual HTTP packets (<code>-A</code>). From this, search for the relevant HTTP header name and print the unique results. Perform OSINT on the abnormal looking string (Google).",
@@ -68,6 +77,7 @@
             "correct_answers": ["lumma", "lummac2", "lumma c2", "lumma stealer", "lummac2 stealer", "Lumma Info-Stealer", "Lumma Info Stealer"]  
         },
         {
+            "quid": "d2a3c10e",
             "question": "In <b>defanged format</b>, what was the full URL that the endpoint tried to connect to using the user agent identified above?",
             "type": "text_input",
             "hint": "Search through the printed packets for the User-Agent string identified in the previous question. Open up more lines of the packet (<code>grep -A</code>) and identify an HTTP header that indicates a redirect URL.",
@@ -75,6 +85,7 @@
             "correct_answers": ["hxxps[://]t[.]me/+zz0192lskaaa"]  
         },
         {
+            "quid": "dc406147",
             "question": "<b>[Bonus]</b> - What is the full title of the YouTube video that the user requested?",
             "type": "text_input",
             "placeholder": "Enter your answer here",

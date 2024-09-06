@@ -6,12 +6,14 @@
   
     "questions": [
         {
+            "quid": "1bc155cb",
             "question": "Simulate the compromise by running <code>sudo ./challenge.elf</code> in a terminal window. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. Enter \"<b>done</b>\" to continue.",
             "type": "text_input",
             "placeholder": "Enter \"done\" to continue",
             "correct_answers": ["done"]
         },
         {
+            "quid": "550decf1",
             "question": "What <b>port</b> is the malware <b>listening</b> on?",
             "type": "text_input",
             "hint": "The <code>sudo netstat</code> command can be paired with several useful options to display network connections and listening ports (<code>-l</code>).",
@@ -19,18 +21,21 @@
             "correct_answers": ["31337", "port 31337"]
         },
         {
+            "quid": "70bc9e97",
             "question": "What is the <b>Process ID (PID)</b> of the malware? <i>This answer cannot be verified, but it's required for the next question(s).</i>",
             "type": "text_input",
             "hint": "The <code>netstat</code> command can be paired with several useful options to display network connections, listening ports, and their associated Process IDs (PIDs).",
             "placeholder": "Enter your answer here"
         },
         {
+            "quid": "f5cd97ec",
             "question": "What is the <b>name</b> of the binary or executable associated with the network listener?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["kitty.meow"]
         },
         {
+            "quid": "ee10ddfd",
             "question": "What is the <b>full path</b> of the previously identified binary?",
             "type": "text_input",
             "hint": "There are several ways to find the path. However, one way involves using the <code>lsof</code> command against the previously identified Process ID (PID).",
@@ -38,6 +43,7 @@
             "correct_answers": ["/tmp/kitty.meow", "/tmp/kitty.meow (deleted)"]
         },
         {
+            "quid": "2ef1bf46",
             "question": "Run the <code>ps</code> command against the previously identified malicious Process ID (PID). What is the full command line invocation of this binary?",
             "type": "text_input",
             "hint": "The <code>-F</code> argument can be used to view the output in full format.",
@@ -45,12 +51,14 @@
             "correct_answers": ["/tmp/kitty.meow -l -p 31337"]
         },
         {
+            "quid": "de1505b1",
             "question": "List the full <b>process tree</b> for the malicious process. What is the name of the <b>parent process</b> that spawned the malware?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["systemd"]
         },
         {
+            "quid": "eb02c041",
             "question": "What is the SHA-256 hash value of the malware? <b>Note:</b> this is not asking about <code>challenge.elf</code>.",
             "type": "text_input",
             "hint": "You might have noticed that the malware was deleted immediately upon executing! However, you can still query binaries and executables held open by active processes through a specific <b>virtual filesystem</b>.",
@@ -58,6 +66,7 @@
             "correct_answers": ["2a6fac3d98e090468962ef18003cb8b89fbffa7219917ca12567d5e42b156948"]
         },
         {
+            "quid": "1f0c7e9b",
             "question": "Extract all <b>printable string characters</b> from the binary. Review the results for any indicators such as risky objects, descriptions, comments, banners, or usage information. Based on these findings, what <b>utility or program</b> can you identify?",
             "type": "text_input",
             "hint": "The <code>strings</code> command is your friend here.",
@@ -65,24 +74,28 @@
             "correct_answers": ["nc", "netcat", "OpenBSD netcat"]
         },
         {
+            "quid": "bcf82281",
             "question": "Examine the <b>system-wide cron jobs</b> configured on the local system. Identify any entries that may be malicious, indicating persistence mechanisms or continued compromise by the attacker. What is the <b>full file path</b> of the script that is executed?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["/tmp/exfiltr8.sh", "/exfiltr8.sh"]
         },
         {
+            "quid": "2e1d7593",
             "question": "Use a service like <a href=\"https://crontab.guru/\" target=\"_blank\">crontab.guru</a> to interpret the cron schedule. What is the specific <b>day</b> when this cron entry runs?",
             "type": "text_input",
             "placeholder": "Answer format: January 10",
             "correct_answers": ["October 13", "13 October", "October 13th"]
         },
         {
+            "quid": "81b6427e",
             "question": "Now, list <b>your own</b> user account's crontab entries. What <b>IP address</b> does the attacker's beacon reach out to?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["208.67.222.222"]
         },
         {
+            "quid": "adccefa7",
             "question": "Excellent work! Clean up and restore the system by terminating the <code>challenge.elf</code> process (Press Ctrl + C). Afterwards, enter \"<b>done</b>\" to continue.",
             "type": "text_input",
             "placeholder": "Enter \"done\" to continue",

@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "97b8e1e3",
             "question": "What is the <b>hostname</b> of the computer that generated the logs in the <code>challenge.evtx</code> file?",
             "type": "text_input",
             "hint": "If you're using the Event Viewer, look for the <b>Computer</b> field.",
@@ -13,6 +14,7 @@
             "correct_answers": ["DESKTOP-1M5L0T9"]
         },
         {
+            "quid": "b48bc031",
             "question": "What is the <b>Process ID (PID)</b> of the execution process that cleared the security event log?",
             "type": "text_input",
             "hint": "Open up the releated log based on its specific <b>Event ID</b>. Then, look for the <b>Execution ProcessID</b> field.",
@@ -20,30 +22,35 @@
             "correct_answers": ["1140"]
         },
         {
+            "quid": "cb942a53",
             "question": "How many <b>logon events</b> are recorded in the logs?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["7"]
         },
         {
+            "quid": "ae0bc5a3",
             "question": "In <b>chronological order</b>, list the names of the accounts that were created within the logs.",
             "type": "text_input",
             "placeholder": "Answer format: User1, User2, etc.",
             "correct_answers": ["Sysadmin, Administraor, backd00r"]
         },
         {
+            "quid": "7626a35c",
             "question": "Which user account was <b>disabled</b> according to the event logs?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["Sysadmin"]
         },
         {
+            "quid": "7e534936",
             "question": "Which user account was <b>deleted</b> according to the event logs?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["backd00r"]
         },
         {
+            "quid": "359995c9",
             "question": "In chronological order, list the <b>security-enabled local groups</b> that the <b>backdoor</b> user account was added to.",
             "type": "text_input",
             "hint": "There may be cases where the system can't resolve the <b>MemberName</b> field. However, you can still <b>correlate</b> a user account's unique Security Identifier (SID) from the user creation event.",
@@ -51,6 +58,7 @@
             "correct_answers": ["Administrators, Remote Desktop Users"]
         },
         {
+            "quid": "a17ae68b",
             "question": "Which user account was added to the <b>Backup Operators</b> group?",
             "type": "text_input",
             "hint": "There may be cases where the system can't resolve the <b>MemberName</b> field. However, you can still <b>correlate</b> a user account's unique Security Identifier (SID) from the user creation event.",

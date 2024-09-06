@@ -234,6 +234,22 @@ a {
     margin-bottom: 0;
 }
 
+/*Challenge Reset*/
+.reset_button {
+    display: flex;
+    justify-content: right;
+}
+.challenge_question_reset_button {
+    border: none;
+    color: #FFFFFF;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s;
+    background: rgba(255,255,255,.05);
+    border: solid 1px rgba(255,255,255,.05);
+}
 
 
 /*Header*/

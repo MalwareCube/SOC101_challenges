@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "da5d6c6e",
             "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
             "type": "text_input",
             "hint": "Check the contents of the <b>Date</b> header.",
@@ -13,6 +14,7 @@
             "correct_answers": ["Sun, 12 May 2024 04:10:52 +0000", "Sun, 12 May 2024 04:10:52", "Sun 12 May 2024 04:10:52", "5/12/24, 00:10"]  
         },
         {
+            "quid": "e268813e",
             "question": "What is the subject of the email?",
             "type": "text_input",
             "hint": "Check the contents of the <b>Subject</b> header.",
@@ -20,6 +22,7 @@
             "correct_answers": ["Reset your Dropbox password"]  
         },
         {
+            "quid": "c88ca5e0",
             "question": "Who was the email sent to?",
             "type": "text_input",
             "hint": "Check the contents of the <b>To</b> header.",
@@ -27,6 +30,7 @@
             "correct_answers": ["emily.nguyen@glbllogistics.co"]  
         },
         {
+            "quid": "ac33091c",
             "question": "Based on the sender's display name, who does the email claim to be from?",
             "type": "text_input",
             "hint": "Check the contents of the <b>From</b> header. Specifically, the display name portion.",
@@ -34,6 +38,7 @@
             "correct_answers": ["Dropbox"]  
         },
         {
+            "quid": "00d5e220",
             "question": "What is the sender's email address?",
             "type": "text_input",
             "hint": "Check the contents of the <b>From</b> header. Specifically, the email address portion.",
@@ -41,6 +46,7 @@
             "correct_answers": ["no-reply@dropbox.com", "<no-reply@dropbox.com>"]  
         },
         {
+            "quid": "0b4003a0",
             "question": "What email address is used for receiving bounced emails?",
             "type": "text_input",
             "hint": "This is also sometimes known as the bounce address or the reverse path.",
@@ -48,6 +54,7 @@
             "correct_answers": ["0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@email.dropbox.com", "<0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@email.dropbox.com>"]  
         },
         {
+            "quid": "a757146b",
             "question": "What is the IP address of the sender's email server?",
             "type": "text_input",
             "hint": "Look for the IP address within the <b>Received</b> headers.",
@@ -55,6 +62,7 @@
             "correct_answers": ["54.240.60.143", "54[.]240[.]60[.]143"]  
         },
         {
+            "quid": "b35f1899",
             "question": "What is the resolved hostname of the sender's IP address?",
             "type": "text_input",
             "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
@@ -62,6 +70,7 @@
             "correct_answers": ["a60-143.smtp-out.us-west-2.amazonses.com "]  
         },
         {
+          "quid": "ffc93b31",
           "question": "What is the Autonomous System Number (ASN) that owns this IP address?",
           "type": "text_input",
           "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
@@ -69,6 +78,7 @@
           "correct_answers": ["AS16509", "16509"]  
       },
       {
+          "quid": "fb90b31a",
           "question": "What was the result of the SPF check?",
           "type": "text_input",
           "hint": "Check the <b>Received-SPF</b> or the <b>Authentication-Results</b> header.",
@@ -76,6 +86,7 @@
           "correct_answers": ["pass"]  
       },
       {
+          "quid": "6dbb53fe",
           "question": "What is the full SPF record of the sender's domain?",
           "type": "text_input",
           "hint": "Run <code>nslookup -type=txt</code> against the domain previously identified in the <b>Return-Path</b>.",
@@ -83,12 +94,14 @@
           "correct_answers": ["v=spf1 include:amazonses.com ~all"]  
       },
         {
+            "quid": "1008fa0c",
             "question": "What is email's Message ID?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["<0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@us-west-2.amazonses.com>", "0101018f6aff12b2-5bcaa145-861b-45da-a06e-b5c1ee3ca941-000000@us-west-2.amazonses.com"]  
         },
         {
+          "quid": "08884efc",
           "question": "What type of encoding was used to transfer the email body content?",
           "type": "text_input",
           "hint": "Look for any email headers related to content encoding.",
@@ -96,6 +109,7 @@
           "correct_answers": ["quoted-printable", "quoted printable"]  
       },
       {
+          "quid": "e759fcb8",
           "question": "Look in the <code>plaintext</code> version of the email. In <b>defanged</b> format, what is the <b>first</b> URL extracted from the email?",
           "type": "text_input",
           "hint": "Use <a href=\"https://gchq.github.io/CyberChef/\" target=\"_blank\">CyberChef</a> to defang the URL. Make sure you also decode any content transfer encoding first!",
@@ -103,12 +117,14 @@
           "correct_answers": ["hxxps[://]www[.]dropbox[.]com/l/ABCIzswwTTJ9--CxR05fYXX35pPA-Y0m3PY/forgot_finish"]  
       },
       {
+        "quid": "12f0738d",
           "question": "Perform a Cisco Talos lookup on the <b>base domain</b> of the URL in the previous question. What is its web reputation?",
           "type": "text_input",
           "placeholder": "Enter your answer here",
           "correct_answers": ["Favorable", "Favourable"]  
       },
       {
+        "quid": "c9c0b450",
           "question": "<b>[Yes or No]</b> - After your analysis, is this email genuine?",
           "type": "text_input",
           "placeholder": "Enter your answer here",

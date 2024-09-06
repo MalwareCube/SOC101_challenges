@@ -6,6 +6,7 @@
 
   "questions": [
       {
+        "quid": "282ddd57",
           "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
           "type": "text_input",
           "hint": "Check the contents of the <b>Date</b> header.",
@@ -13,6 +14,7 @@
           "correct_answers": ["Tue, 31 Oct 2023 10:10:04 -0900", "Tue, 31 Oct 2023 10:10:04", "Tue 31 Oct 2023 10:10:04", "31 Oct 2023 10:10:04"]  
       },
       {
+        "quid": "fb7a3fb3",
           "question": "What is the subject of the email?",
           "type": "text_input",
           "hint": "Check the contents of the <b>Subject</b> header.",
@@ -20,6 +22,7 @@
           "correct_answers": ["Your account has been flagged for unusual activity"]  
       },
       {
+        "quid": "e78a4eb6",
           "question": "Who was the email sent to?",
           "type": "text_input",
           "hint": "Check the contents of the <b>To</b> header.",
@@ -27,6 +30,7 @@
           "correct_answers": ["dderringer@mighty-solutions.net"]  
       },
       {
+        "quid": "e93e7f74",
           "question": "Based on the sender's display name, who does the email claim to be from?",
           "type": "text_input",
           "hint": "Check the contents of the <b>From</b> header. Specifically, the display name portion.",
@@ -34,6 +38,7 @@
           "correct_answers": ["Outlook Support Team", "Outlook", "Microsoft", "Microsoft Support Team"]  
       },
       {
+        "quid": "595e4b21",
           "question": "What is the sender's email address?",
           "type": "text_input",
           "hint": "Check the contents of the <b>From</b> header. Specifically, the email address portion.",
@@ -41,6 +46,7 @@
           "correct_answers": ["social201511138@social.helwan.edu.eg", "<social201511138@social.helwan.edu.eg>"]  
       },
       {
+        "quid": "0a9e84c9",
           "question": "What email address is used for receiving bounced emails?",
           "type": "text_input",
           "hint": "This is also sometimes known as the bounce address or the reverse path.",
@@ -48,6 +54,7 @@
           "correct_answers": ["social201511138@social.helwan.edu.eg"]  
       },
       {
+        "quid": "785364e3",
           "question": "What is the IP address of the sender's email server?",
           "type": "text_input",
           "hint": "Look for the IP address within the <b>Received</b> headers or within a custom <b>X-Header</b>.",
@@ -55,6 +62,7 @@
           "correct_answers": ["40.107.22.60", "40[.]107[.]22[.]60"]  
       },
       {
+        "quid": "ae7c3517",
           "question": "What is the resolved hostname of the sender's IP address?",
           "type": "text_input",
           "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
@@ -62,6 +70,7 @@
           "correct_answers": ["mail-am6eur05on2060.outbound.protection.outlook.com"]  
       },
       {
+        "quid": "bea9acf5",
         "question": "What corporation owns the sender's IP address?",
         "type": "text_input",
         "hint": "Perform a reverse DNS lookup on the previously identified IP address.",
@@ -69,6 +78,7 @@
         "correct_answers": ["Microsoft Corporation", "Microsoft", "Netherlands Amsterdam Microsoft Corporation"]  
     },
     {
+        "quid": "12baf728",
         "question": "What was the result of the SPF check?",
         "type": "text_input",
         "hint": "Check the <b>Received-SPF</b> or the <b>Authentication-Results</b> header.",
@@ -76,6 +86,7 @@
         "correct_answers": ["pass"]  
     },
     {
+        "quid": "13486081",
         "question": "What is the full SPF record of the sender's domain?",
         "type": "text_input",
         "hint": "Run <code>nslookup -type=txt</code> against the domain previously identified in the <b>Return-Path</b>.",
@@ -83,12 +94,14 @@
         "correct_answers": ["v=spf1 include:spf.protection.outlook.com -all"]  
     },
       {
+        "quid": "c9924f7e",
           "question": "What is email's Message ID?",
           "type": "text_input",
           "placeholder": "Enter your answer here",
           "correct_answers": ["<JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6>", "JMrByPl2c3HBo8SctKnJ5C5Gp64sPSSWk76p4sjQ@s6"]  
       },
       {
+        "quid": "1e6c673f",
         "question": "What type of encoding was used to transfer the email body content?",
         "type": "text_input",
         "hint": "Look for any email headers related to content encoding.",
@@ -96,6 +109,7 @@
         "correct_answers": ["base64", "base 64", "base 64 encoding", "base64 encoding", "base-64", "base-64 encoding"]  
     },
     {
+        "quid": "fd9fd4d1",
         "question": "In <b>defanged</b> format, what is the <b>second</b> URL extracted from the email?",
         "type": "text_input",
         "hint": "Use <a href=\"https://gchq.github.io/CyberChef/\" target=\"_blank\">CyberChef</a> to defang the URL.",
@@ -103,12 +117,14 @@
         "correct_answers": ["hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812/", "hxxps[://]0[.]232[.]205[.]92[.]host[.]secureserver[.]net/lclbluewin08812"]  
     },
     {
+        "quid": "51f6393c",
         "question": "Perform a VirusTotal scan on the URL. What verdict did Fortinet assign to it?",
         "type": "text_input",
         "placeholder": "Enter your answer here",
         "correct_answers": ["Phishing"]  
     },
     {
+        "quid": "6475102f",
         "question": "<b>[Yes or No]</b> - After your analysis, is this email genuine?",
         "type": "text_input",
         "placeholder": "Enter your answer here",

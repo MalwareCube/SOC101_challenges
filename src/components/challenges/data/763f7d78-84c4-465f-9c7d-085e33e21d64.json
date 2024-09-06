@@ -6,6 +6,7 @@
   
     "questions": [
         {
+            "quid": "d1fba56f",
             "question": "Based on the contents of the email header, what is the full <b>date and time</b> of the email delivery?",
             "type": "text_input",
             "hint": "Check the contents of the <b>Date</b> header.",
@@ -13,6 +14,7 @@
             "correct_answers": ["Tue, 14 May 2024 23:31:08 +0000", "Tue, 14 May 2024 23:31:08", "Tue 14 May 2024 23:31:08", "5/14/24, 19:31"]  
         },
         {
+            "quid": "1cb0b125",
             "question": "What is the subject of the email?",
             "type": "text_input",
             "hint": "Check the contents of the <b>Subject</b> header.",
@@ -20,6 +22,7 @@
             "correct_answers": ["You're Invited!"]  
         },
         {
+            "quid": "a60adebb",
             "question": "Who was the email sent to?",
             "type": "text_input",
             "hint": "Check the contents of the <b>To</b> header.",
@@ -27,6 +30,7 @@
             "correct_answers": ["emily.nguyen@glbllogistics.co"]  
         },
         {
+            "quid": "1651ddcd",
             "question": "Based on the sender's display name, who does the email claim to be from?",
             "type": "text_input",
             "hint": "Check the contents of the <b>From</b> header. Specifically, the display name portion.",
@@ -34,6 +38,7 @@
             "correct_answers": ["Adam Barry"]  
         },
         {
+            "quid": "093ef536",
             "question": "What is the sender's email address?",
             "type": "text_input",
             "hint": "Check the contents of the <b>From</b> header. Specifically, the email address portion.",
@@ -41,6 +46,7 @@
             "correct_answers": ["abarry@live.com"]  
         },
         {
+            "quid": "7ccfc443",
             "question": "What email infrastructure or provider was used to send the email?",
             "type": "text_input",
             "hint": "Look up who owns the sender's domain.",
@@ -48,6 +54,7 @@
             "correct_answers": ["Microsoft", "Microsoft Corporation"]  
         },
         {
+            "quid": "54547570",
             "question": "What is email's Message ID?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -55,6 +62,7 @@
         },
 
         {
+            "quid": "8f2bd0c3",
             "question": "Run <code>emldump.py</code> against the email file. Which index number contains the file attachment?",
             "type": "text_input",
             "hint": "The script can be found under <code>/01_Phishing_Analysis/Tools/emldump.py</code>. To view the different parts (indexes) of the MIME file, use the <code>-d</code> (dump) option.",
@@ -63,6 +71,7 @@
         },
 
         {
+            "quid": "53494f78",
             "question": "What is the filename of the attachment?",
             "type": "text_input",
             "placeholder": "**_*******_****.****",
@@ -70,6 +79,7 @@
         },
 
         {
+            "quid": "8032623b",
             "question": "What is the <b>SHA-256</b> hash of the attachment?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -77,6 +87,7 @@
         },
 
         {
+            "quid": "337bbfc3",
             "question": "Submit the hash value to VirusTotal. What is the <b>Popular threat label</b> returned for this sample?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
@@ -84,12 +95,14 @@
         },
 
         {
+            "quid": "c2440114",
             "question": "<b>[Yes or No]</b> - After your analysis, should the email be released to the user's inbox?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["no"]  
         },
         {
+            "quid": "800284df",
             "question": "<b>[Bonus]</b> - Perform static analysis on the malicious document and its embedded VBA macro. What URL does the malware attempt to download an executable from? Provide the URL in <b>defanged</b> format.",
             "type": "text_input",
             "hint": "The <code>oledump.py</code> script can be used to carve into the file's embedded content. It can be found under <code>/01_Phishing_Analysis/Tools/oledump.py</code>.",
@@ -97,6 +110,7 @@
             "correct_answers": ["hxxps[://]github[.]com/TCWUS/Pastebin-Uploader[.]exe"]  
         },
         {
+            "quid": "9bab5d14",
             "question": "<b>[Bonus]</b> - Perform static analysis on the malicious document and its embedded VBA macro. What is the filename used by the macro to save the executable?",
             "type": "text_input",
             "hint": "The <code>oledump.py</code> script can be used to carve into the file's embedded content. It can be found under <code>/01_Phishing_Analysis/Tools/oledump.py</code>.",

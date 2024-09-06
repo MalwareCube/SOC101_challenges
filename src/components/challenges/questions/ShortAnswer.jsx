@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-/*FontAwesome Icons*/
+/* FontAwesome Icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
 
-/*Answer State*/
-const ShortAnswer = ({ data, index }) => {
+/* Answer State */
+const ShortAnswer = ({ data, index, uid }) => {
     const [showHint, setShowHint] = useState(false);
     const [submittedAnswer, setSubmittedAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(false);
     const [incorrectIndicator, setIncorrectIndicator] = useState(false);
+
+    // Check localStorage on component mount
+    useEffect(() => {
+        // Retrieve stored data from localStorage
+        const storedData = JSON.parse(localStorage.getItem(uid)) || [];
+
+        // Check if the question's quid is in the array
+        if (storedData.includes(data.quid)) {
+            setIsCorrect(true); // Set isCorrect to true if quid is found
+            // Set the submittedAnswer to the first correct answer
+            const firstCorrectAnswer = data.correct_answers && data.correct_answers.length > 0 ? data.correct_answers[0] : '';
+            setSubmittedAnswer(firstCorrectAnswer);
+        }
+    }, [uid, data.quid, data.correct_answers]);
 
     // Toggle Hint Feature
     const toggleHint = () => {
@@ -32,7 +46,16 @@ const ShortAnswer = ({ data, index }) => {
         setIsCorrect(isSubmittedCorrect);
     
         if (isSubmittedCorrect) {
-            setShowHint(false); // Hide hint if answer is correct
+            setShowHint(false); // Hide hint if the answer is correct
+            
+            // Check if uid exists in localStorage
+            let storedData = JSON.parse(localStorage.getItem(uid)) || [];
+
+            // Check if the question's quid is already in the array
+            if (!storedData.includes(data.quid)) {
+                storedData.push(data.quid); // Add quid to the array
+                localStorage.setItem(uid, JSON.stringify(storedData)); // Update localStorage
+            }
         } else {
             setIncorrectIndicator(true); // Incorrect indicator
             setTimeout(() => {
@@ -40,7 +63,6 @@ const ShortAnswer = ({ data, index }) => {
             }, 500);
         }
     };
-    
 
     // Check if hint is available
     const hasHint = data.hint && data.hint.trim() !== '';

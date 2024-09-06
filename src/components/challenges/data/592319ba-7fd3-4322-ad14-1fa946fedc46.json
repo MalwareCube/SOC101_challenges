@@ -6,12 +6,14 @@
   
     "questions": [
         {
+            "quid": "dc930f82",
             "question": "Simulate the compromise by running <code>challenge.exe</code> in an Administrator-level command prompt. Make sure to not close the program or window until after you've completed the challenge. However, you can temporarily minimize it. Enter \"<b>done</b>\" to continue.",
             "type": "text_input",
             "placeholder": "Enter \"done\" to continue",
             "correct_answers": ["done"]
         },
         {
+            "quid": "ca08b6c8",
             "question": "What <b>port</b> is the <code>challenge.exe</code> malware listening on?",
             "type": "text_input",
             "hint": "The <code>netstat</code> command can be paired with several useful options to display network connections and listening ports.",
@@ -19,12 +21,14 @@
             "correct_answers": ["50050", "port 50050"]
         },
         {
+            "quid": "b1f537c5",
             "question": "What is the <b>Process ID (PID)</b> of the malware? <i>This answer cannot be verified, but it's required for the next question(s).</i>",
             "type": "text_input",
             "hint": "The <code>netstat</code> command can be paired with several useful options to display network connections, listening ports, and their associated Process IDs (PIDs).",
             "placeholder": "Enter your answer here"
         },
         {
+            "quid": "a7de8195",
             "question": "List all of the loaded <b>DLL modules</b> for the listener's associated process. What are the names of the two DLLs that start with the letter <b>m</b>?",
             "type": "text_input",
             "hint": "Read the help page for the (<code>tasklist /?</code>) command to figure out the option that can list a process' loaded DLL modules.",
@@ -32,6 +36,7 @@
             "correct_answers": ["mswsock.dll, msvcrt.dll", "msvcrt.dll, mswsock.dll", "mswsock.dll msvcrt.dll", "msvcrt.dll mswsock.dll"]
         },
         {
+            "quid": "86f82e48",
             "question": "What is the <b>name</b> of the malware's <b>parent</b> process?",
             "type": "text_input",
             "hint": "There are several ways to find out this information. The <code>wmic</code> command can be used to pull back specific details about a process, including its parent's process name.",
@@ -39,6 +44,7 @@
             "correct_answers": ["cmd.exe"]
         },
         {
+            "quid": "61c79d47",
             "question": "List all the <b>shared resources</b> on the local system. What is the name of the <b>share</b> that the attacker created?",
             "type": "text_input",
             "hint": "The <code>net _____</code> command is your friend.",
@@ -46,12 +52,14 @@
             "correct_answers": ["xkalibur"]
         },
         {
+            "quid": "06aad1fc",
             "question": "What path or resource does the attacker's share point to?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\AppData\\Local\\Temp\\46d5b8556d0d3e30ec1"]
         },
         {
+            "quid": "3fd237ef",
             "question": "The attacker created a <b>Run</b> entry to establish persistence on the system. What is the <b>full path</b> of the registry key?",
             "type": "text_input",
             "hint": "You can use the <b>Autoruns</b> utility (Sysinternals) to identify abnormal autorun entries. Or, you can query the well-known autorun entries manually using <code>reg query</code>.",
@@ -59,18 +67,21 @@
             "correct_answers": ["HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "Computer\\HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "Computer\\HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", "HKEY_CURRENT_USER/SOFTWARE/Microsoft/Windows/CurrentVersion/Run", "HKCU/SOFTWARE/Microsoft/Windows/CurrentVersion/Run"]
         },
         {
+            "quid": "b9a9322a",
             "question": "What is the <b>name</b> of the malicious entry the attacker created in the previously identified registry key?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["CleanUpController"]
         },
         {
+            "quid": "9c5f0086",
             "question": "What is the full file or image <b>path</b> that this registry entry points to?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Downloads\\wininit.exe"]
         },
         {
+            "quid": "84d3f80c",
             "question": "What is the name of the backdoor <b>service</b> installed by the attacker?",
             "type": "text_input",
             "hint": "You can use the <b>Autoruns</b> utility (Sysinternals) to identify abnormal services.",
@@ -78,6 +89,7 @@
             "correct_answers": ["WindowsActiveService"]
         },
         {
+            "quid": "fcdebcf7",
             "question": "What is the <b>START_TYPE</b> configuration of the service?",
             "type": "text_input",
             "hint": "Once you've identified the name of the backdoor service, you can use the <code>sc __</code> command to query its configuration.",
@@ -85,12 +97,14 @@
             "correct_answers": ["AUTO_START", "auto start", "autostart", "auto"]
         },
         {
+            "quid": "93178c87",
             "question": "What is the full path to the service binary?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Documents\\svcbackdoor.exe"]
         },
         {
+            "quid": "8b99ca78",
             "question": "What is the name of the scheduled task created by the attacker?",
             "type": "text_input",
             "hint": "You can use the <b>Autoruns</b> utility (Sysinternals) to identify abnormal scheduled tasks. Or, you can query system tasks manually using the <code>schtasks</code> utility.",
@@ -98,18 +112,21 @@
             "correct_answers": ["ayttpnzc", "\\ayttpnzc"]
         },
         {
+            "quid": "9fc0d2d4",
             "question": "What is the full path to the executable that the scheduled task runs?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Downloads\\beac0n.exe"]
         },
         {
+            "quid": "393b0a5b",
             "question": "At what time is the scheduled task set to run?",
             "type": "text_input",
             "placeholder": "*:**:** **",
             "correct_answers": ["3:30:00 AM", "3", "3:30:00", "3:30 AM", "3AM", "3 AM"]
         },
         {
+            "quid": "52d4694c",
             "question": "Excellent work! Clean up and restore the system by terminating the <code>challenge.exe</code> process (Press Ctrl + C). Then, run <code>challenge.exe -revert</code>. Afterwards, enter \"<b>done</b>\" to continue.",
             "type": "text_input",
             "placeholder": "Enter \"done\" to continue",
