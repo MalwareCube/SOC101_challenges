@@ -47,7 +47,7 @@
         },
         {
             "quid": "124a7545",
-            "question": "Aside from HTTP on port 80, what is the other <b>well-known tcp port</p> in the capture?",
+            "question": "Aside from HTTP on port 80, what is the other <b>well-known tcp port</b> in the capture?",
             "type": "text_input",
             "hint": "Use various command-line utilities to extract the destination port numbers from these packets, count the occurrences of each unique port, and then sort the counts in descending order. <b>Tip:</b> Don't forget the <code>-n</code> option to skip port name resolution and focus on the port numbers. Remember, this is asking for well-known ports, not ephemeral ports.",
             "placeholder": "Enter your answer here",
