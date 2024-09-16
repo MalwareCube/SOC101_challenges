@@ -53,7 +53,7 @@
         },
         {
             "quid": "06aad1fc",
-            "question": "What path or resource does the attacker's share point to?",
+            "question": "What path or resource does the attacker's share point to? <b>Note:</b> If you created a user account with any name other than <code>tcm</code>, make sure to replace <b>your username</b> in the output with <code>tcm</code> to ensure a correct answer!",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\AppData\\Local\\Temp\\46d5b8556d0d3e30ec1"]
@@ -75,7 +75,7 @@
         },
         {
             "quid": "9c5f0086",
-            "question": "What is the full file or image <b>path</b> that this registry entry points to?",
+            "question": "What is the full file or image <b>path</b> that this registry entry points to? <b>Note:</b> If you created a user account with any name other than <code>tcm</code>, make sure to replace <b>your username</b> in the output with <code>tcm</code> to ensure a correct answer!",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Downloads\\wininit.exe"]
@@ -98,7 +98,7 @@
         },
         {
             "quid": "93178c87",
-            "question": "What is the full path to the service binary?",
+            "question": "What is the full path to the service binary? <b>Note:</b> If you created a user account with any name other than <code>tcm</code>, make sure to replace <b>your username</b> in the output with <code>tcm</code> to ensure a correct answer!",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Documents\\svcbackdoor.exe"]
@@ -113,7 +113,7 @@
         },
         {
             "quid": "9fc0d2d4",
-            "question": "What is the full path to the executable that the scheduled task runs?",
+            "question": "What is the full path to the executable that the scheduled task runs? <b>Note:</b> If you created a user account with any name other than <code>tcm</code>, make sure to replace <b>your username</b> in the output with <code>tcm</code> to ensure a correct answer!",
             "type": "text_input",
             "placeholder": "Enter your answer here",
             "correct_answers": ["C:\\Users\\tcm\\Downloads\\beac0n.exe"]
