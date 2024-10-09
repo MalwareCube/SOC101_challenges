@@ -51,19 +51,11 @@
             "correct_answers": ["/tmp/kitty.meow -l -p 31337"]
         },
         {
-            "quid": "de1505b1",
-            "question": "List the full <b>process tree</b> for the malicious process. What is the name of the <b>parent process</b> that spawned the malware?",
-            "type": "text_input",
-            "placeholder": "Enter your answer here",
-            "correct_answers": ["systemd"]
-        },
-        {
             "quid": "eb02c041",
-            "question": "What is the SHA-256 hash value of the malware? <b>Note:</b> this is not asking about <code>challenge.elf</code>.",
+            "question": "What is the SHA-256 hash value of the malware? <i>This answer cannot be verified due to potential version differences; however, it's a useful exercise.</i>",
             "type": "text_input",
             "hint": "You might have noticed that the malware was deleted immediately upon executing! However, you can still query binaries and executables held open by active processes through a specific <b>virtual filesystem</b>.",
-            "placeholder": "Enter your answer here",
-            "correct_answers": ["2a6fac3d98e090468962ef18003cb8b89fbffa7219917ca12567d5e42b156948"]
+            "placeholder": "Enter your answer here"
         },
         {
             "quid": "1f0c7e9b",
@@ -86,13 +78,6 @@
             "type": "text_input",
             "placeholder": "Answer format: January 10",
             "correct_answers": ["October 13", "13 October", "October 13th"]
-        },
-        {
-            "quid": "81b6427e",
-            "question": "Now, list <b>your own</b> user account's crontab entries. What <b>IP address</b> does the attacker's beacon reach out to?",
-            "type": "text_input",
-            "placeholder": "Enter your answer here",
-            "correct_answers": ["208.67.222.222"]
         },
         {
             "quid": "adccefa7",
