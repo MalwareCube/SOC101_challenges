@@ -82,7 +82,7 @@
             "type": "text_input",
             "hint": "Search through the printed packets for the User-Agent string identified in the previous question. Open up more lines of the packet (<code>grep -A</code>) and identify an HTTP header that indicates a redirect URL.",
             "placeholder": "Enter your answer here",
-            "correct_answers": ["hxxps[://]t[.]me/+zz0192lskaaa"]  
+            "correct_answers": ["hxxps[://]t[.]me/+zz0192lskaaa", "hxxp[://]t[.]me/+zz0192lskaaa"]
         },
         {
             "quid": "dc406147",
