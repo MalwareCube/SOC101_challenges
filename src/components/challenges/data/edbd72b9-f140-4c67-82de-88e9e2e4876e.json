@@ -1,0 +1,81 @@
+{
+    "uid": "edbd72b9-f140-4c67-82de-88e9e2e4876e",
+    "title": "Volatility Challenge 1",
+    "instructions": "<p>A System Administrator at <i>Earthworm Solutions</i> recently dusted off a memory capture from a Windows workstation that was suspected to have been compromised. Unfortunately, nobody at the company can remember the details of the incident, and they now require someone to investigate the capture for signs of suspicious activity.</p><p>Your task is to test out your memory analysis skills by examining the <code>challenge.vmem</code> file and analyze it for anything out of place or indicative of malware.</p><p>You will need a password to extract the challenge file. The password is <code>infected</code>.</p><h3>Challenge File:</h3><p><ul><li><a target=\"_blank\" href=\"https://drive.google.com/file/d/14klx693c0WG5mMX8MNC_wDtGwIbdV-8H/view?usp=sharing\">https://drive.google.com/file/d/14klx693c0WG5mMX8MNC_wDtGwIbdV-8H/view?usp=sharing</a></li><li>Password: <code>infected</code></li></ul></p>",
+  
+  
+    "questions": [
+        {
+            "quid": "9640z251",
+            "question": "What was the <b>system time</b> at which the memory dump was captured?",
+            "type": "text_input",
+            "hint": "The <code>windows.info</code> plugin can be useful here.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["2024-10-29 19:18:00+00:00", "2024-10-29 19:18:00", "2024-10-29 19:18"]  
+        },
+        {
+            "quid": "4f1a5883",
+            "question": "What was the <b>major/minor</b> version of the system set to?",
+            "type": "text_input",
+            "hint": "The <code>windows.info</code> plugin can be useful here.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["15.19041"]  
+        },
+        {
+            "quid": "22493301",
+            "question": "What is the name of the process(es) that appears malicious or out of place?",
+            "type": "text_input",
+            "hint": "The <code>windows.pslist</code> or <code>windows.psscan</code> plugins can enumerate processes in the memory capture.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["crss.exe", "crss"]  
+        },
+        {
+            "quid": "2b042ace",
+            "question": "Which legitimate Windows process is it attempting to obfuscate as?",
+            "type": "text_input",
+            "hint": "Think back to the <b>Windows Core Processes</b> lessons.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["csrss.exe"]  
+        },
+        {
+            "quid": "c575432b",
+            "question": "How many <b>established</b> network connections did the process have active at the time of capture?",
+            "type": "text_input",
+            "hint": "The <code>windows.netstat</code> or <code>windows.netscan</code> plugins can enumerate network connections in the memory capture.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["3", "three"]  
+        },
+        {
+            "quid": "2519247a",
+            "question": "Using the <b>PID</b> identified in the previous question, what is the <b>name</b> of its <b>parent process</b>?",
+            "type": "text_input",
+            "hint": "The <code>windows.pstree</code> plugin can be used to build out the process tree within the memory capture.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["explorer.exe", "explorer", "C:\\Windows\\Explorer.EXE"]  
+        },
+        {
+            "quid": "a751feaf",
+            "question": "What is the <b>full system path</b> of the malicious process executable?",
+            "type": "text_input",
+            "hint": "The <code>windows.pstree</code> plugin can be used to build out the process tree within the memory capture. It also displays the image path, location, and command-line invocations for each process.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": ["C:\\Windows\\System\\crss.exe"]  
+        },
+        {
+            "quid": "8d217bf7",
+            "question": "What are the <b>SHA-256</b> hash values of <b>both</b> malicious process executables?",
+            "type": "text_input",
+            "hint": "The <code>windows.pslist</code> plugin, paired with the <code>--pid</code> and <code>--dump</code> options, can be used to extract process executables to disk. You can target multiple PIDs by separating them with a space.",
+            "placeholder": "Answer format: hash1, hash2",
+            "correct_answers": ["e3e024afec178c1b9d5410c9ddc0810c94c3cb18ec52830d72d8f38a622b2131, 629a3c75dfaa0d87c01cf49011671448553b5ead04bb63128cde803d36d518e7", "629a3c75dfaa0d87c01cf49011671448553b5ead04bb63128cde803d36d518e7, e3e024afec178c1b9d5410c9ddc0810c94c3cb18ec52830d72d8f38a622b2131", "e3e024afec178c1b9d5410c9ddc0810c94c3cb18ec52830d72d8f38a622b2131 629a3c75dfaa0d87c01cf49011671448553b5ead04bb63128cde803d36d518e7", "629a3c75dfaa0d87c01cf49011671448553b5ead04bb63128cde803d36d518e7 e3e024afec178c1b9d5410c9ddc0810c94c3cb18ec52830d72d8f38a622b2131"]  
+        },
+        {
+            "quid": "d7db188c",
+            "question": "What is the <b>name</b> of the persistent <b>run</b> entry set by the malware?",
+            "type": "text_input",
+            "hint": "The <code>windows.registry.printkey</code> plugin can be used to query specific registry keys within the memory capture.",
+            "placeholder": "Enter your answer here",
+            "correct_answers": [":>7;O:", "КОЗЛЯК"]  
+        }
+    ]
+  }
