@@ -34,7 +34,7 @@
             "question": "How many <b>HTTP</b> packets are contained in the capture file?",
             "type": "text_input",
             "placeholder": "Enter your answer here",
-            "correct_answers": ["8"]  
+            "correct_answers": ["8", "289", "840"]  
         },
         {
             "quid": "688efa67",
