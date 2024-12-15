@@ -94,7 +94,7 @@
             "type": "text_input",
             "hint": "Once you've identified the name of the backdoor service, you can use the <code>sc __</code> command to query its configuration.",
             "placeholder": "Enter your answer here",
-            "correct_answers": ["AUTO_START", "auto start", "autostart", "auto"]
+            "correct_answers": ["AUTO_START", "auto start", "autostart", "auto", "automatic"]
         },
         {
             "quid": "93178c87",
